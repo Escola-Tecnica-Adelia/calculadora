@@ -1,0 +1,32 @@
+img:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+a {
+  color: #fba64f;
+  font-family: Roboto;
+}
+
+p {
+  font-family: Roboto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+#pdf p {
+  color: red;
+  font-size: 50px;
+}
+
+#ano {
+  font-size: 32px;
+  color: #ffffff;
+}

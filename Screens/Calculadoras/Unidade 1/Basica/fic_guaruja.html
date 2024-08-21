@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="../../../../../Styles/img/colegio.png">
+		<title>Calculadora - Colégio Adélia</title>
+		<script type="text/javascript" script-name="anonymous-pro" src="http://use.edgefonts.net/anonymous-pro.js"></script>
+		<script type="text/javascript" script-name="cabin-condensed" src="http://use.edgefonts.net/cabin-condensed.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
+
+            <script type="text/javascript">
+				var imported = document.createElement('script');
+				imported.src = 'fic_guaruja.js';
+				document.head.appendChild(imported); 
+
+			function mostrar(a){
+				var x=a.value;
+				if(x==5){
+				document.getElementById("modalidade").style.display='block'
+				document.getElementById("flex").style.display='block'
+				document.getElementById("eixo").style.display='none'
+				document.getElementById("eixos").style.display='none'
+				document.getElementById("curso").style.display='block'
+			    document.getElementById("Cursos2").style.display='block'
+				document.getElementById("valor1").value="";
+				document.getElementById("desconto1").value="";
+				document.getElementById("curso").value=5;
+					}
+				else{
+					
+				document.getElementById("modal").style.display='none'
+				
+				}
+				} 
+
+				function mostrar1(a){
+				var x=a.value;
+				if(x!=0){
+				document.getElementById("curso").style.display='block'
+			
+					}
+				else{
+				document.getElementById("modal").style.display='none'
+				}
+				}
+				
+				function voltar(){
+				document.getElementById("modalidade").style.display='none'
+				document.getElementById("flex").style.display='none'
+				document.getElementById("Cursos2").style.display='none'
+				document.getElementById("eixo").style.display='block'
+				document.getElementById("eixos").style.display='block'
+				document.getElementById("curso").style.display='block'
+				document.getElementById("eixo").value="";
+				document.getElementById("curso").value=1;
+				document.getElementById("valor1").value="";
+				document.getElementById("desconto1").value="";
+			  document.getElementById("Cursos2").style.display='none'
+				document.getElementById("flex").value=12;
+				}
+
+				function limpar(){
+					document.getElementById("total1").value="";
+					document.getElementById("total2").value="";
+					document.getElementById("total6").value="";
+				}
+
+
+				function popular(caixa1){
+				  	var cx1 = document.getElementById(caixa1);
+				  	var cx2 = document.getElementById('curso');	
+				  	cx2.innerHTML = "";
+
+				  	var opcaoCurso = cursos;
+
+				  	console.log(opcaoCurso);
+
+
+				
+					  for( i = 0; i < opcaoCurso.length; i++){
+
+						if(opcaoCurso[i].categoria == cx1.value){
+	
+						var textoCurso  = opcaoCurso[i].curso;
+						var codigoCurso = opcaoCurso[i].cod;
+						var novaOpcao   = document.createElement("option");
+	
+						novaOpcao.text  = textoCurso;
+					novaOpcao.value = codigoCurso;
+					cx2.options.add(novaOpcao);
+					}
+
+
+}
+				
+
+
+                    function popular1(caixa1){
+				  	var cx1 = document.getElementById(caixa1);
+				  	var cx2 = document.getElementById('curso');	
+				  	cx2.innerHTML = "";
+
+				  	var opcaoCurso = cursos;
+
+				  	console.log(opcaoCurso);
+
+
+				
+					  for( i = 0; i < opcaoCurso.length; i++){
+
+						if(opcaoCurso[i].flex == cx1.value){
+	
+						var textoCurso  = opcaoCurso[i].curso;
+						var codigoCurso = opcaoCurso[i].cod;
+						var novaOpcao   = document.createElement("option");
+	
+						novaOpcao.text  = textoCurso;
+					novaOpcao.value = codigoCurso;
+					cx2.options.add(novaOpcao);
+					}
+
+
+				}
+			}
+
+				function atribuirValores2(){
+					
+					
+				  	
+				}
+
+
+
+
+
+
+				atribuirValores();
+
+				}
+
+				function atribuirValores(){
+					var opcaoCurso = cursos; // intancio um array com minha base de dados
+					
+					var cx2 = document.getElementById("curso");	
+
+					 for( i = 0; i < opcaoCurso.length; i++){
+
+							if(opcaoCurso[i].cod == cx2.value){
+
+
+								var ul = document.getElementById("CBO");
+								limparLista(ul);
+								var str =  opcaoCurso[i].CBO;
+							var docs = str.split("|");
+							for(x = 0; x < docs.length; x++ ){
+									var li = document.createElement("p");
+									li.appendChild(document.createTextNode(docs[x]));
+									ul.appendChild(li);
+							}
+
+								break;
+							}
+
+							}
+
+
+					  for( i = 0; i < opcaoCurso.length; i++){
+
+							if(opcaoCurso[i].cod == cx2.value){
+
+
+								var ul = document.getElementById("Disciplinas");
+								limparLista(ul);
+								var str =  opcaoCurso[i].Disciplinas;
+							var docs = str.split("|");
+							for(x = 0; x < docs.length; x++ ){
+									var li = document.createElement("p");
+									li.appendChild(document.createTextNode(docs[x]));
+									ul.appendChild(li);
+							}
+
+								break;
+							}
+
+							}
+				  	
+				  	for( i = 0; i < opcaoCurso.length; i++){
+
+				  		if(opcaoCurso[i].cod == cx2.value){
+				  			var ul = document.getElementById("Perfil");
+				  			limparLista(ul);
+				  			var str =  opcaoCurso[i].Perfil;
+							var docs = str.split("|");
+ 							for(x = 0; x < docs.length; x++ ){
+  								var li = document.createElement("p");
+  								li.appendChild(document.createTextNode(docs[x]));
+  								ul.appendChild(li);
+							}
+
+				  			break;
+				  		}
+
+				  	}
+
+					for( i = 0; i < opcaoCurso.length; i++){
+				  		if(opcaoCurso[i].cod == cx2.value){
+				  			var ul = document.getElementById("Preco");
+				  			limparLista(ul);
+				  			var str =  opcaoCurso[i].Preco;
+							var docs = str.split("|");
+ 							for(x = 0; x < docs.length; x++ ){
+  								var li = document.createElement("p");
+  								li.appendChild(document.createTextNode(docs[x]));
+  								ul.appendChild(li);
+							}
+				  			break;
+				  		}
+				  	}
+
+					for( i = 0; i < opcaoCurso.length; i++){
+				  		if(opcaoCurso[i].cod == cx2.value){
+				  			var ul = document.getElementById("horario");
+				  			limparLista(ul);
+				  			var str =  opcaoCurso[i].horario;
+							var docs = str.split("|");
+ 							for(x = 0; x < docs.length; x++ ){
+  								var li = document.createElement("p");
+  								li.appendChild(document.createTextNode(docs[x]));
+  								ul.appendChild(li);
+							}
+				  			break;
+				  		}
+
+				  	}
+				  	
+				  }
+
+				  function limparLista(ul){
+				  	while (ul.firstChild) {
+    							ul.removeChild(ul.firstChild);
+  							}
+
+  					}
+
+			function calcValor(){
+			  // zerando total
+			  document.getElementById("total1").value = '0';
+			  // valor líquido
+			  var VTOTALLIQUIDO1 = parseFloat(document.getElementById("valor1").value);
+			  // desconto 1 - porcentagem
+			  var descont = document.getElementById("desconto1").value.replace(",",".");
+			
+			  
+			  var DESCONTO1 = descont;
+			  var PDESCONTO1 = parseFloat( (VTOTALLIQUIDO1 * (DESCONTO1))/100 );
+			  var TOTAL1 = parseFloat(VTOTALLIQUIDO1) - parseFloat(PDESCONTO1);
+			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO1.toFixed(2);
+			  document.getElementById("total1").value = 'R$ ' + TOTAL1.toFixed(2);
+			  // zerando total
+			  document.getElementById("total2").value = '0';
+			  // valor líquido
+			  var VTOTALLIQUIDO2 = parseFloat(document.getElementById("valor1").value);
+			  // desconto 2 - porcentagem
+			  var DESCONTO2 = parseFloat(document.getElementById("desconto1").value.replace(",","."));
+			  var PDESCONTO2 = parseFloat( (VTOTALLIQUIDO2 * ((DESCONTO2)-2.5))/100);
+			  var TOTAL2 = parseFloat(VTOTALLIQUIDO2) - parseFloat(PDESCONTO2);
+			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO2.toFixed(2);
+			  document.getElementById("total2").value = 'R$ ' + TOTAL2.toFixed(2);
+			  // zerando total
+			  document.getElementById("total6").value = '0';
+			  // valor líquido
+			  var VTOTALLIQUIDO6 = parseFloat(document.getElementById("valor1").value);
+			  // desconto 6 - porcentagem
+			  var DESCONTO6 = parseFloat(document.getElementById("desconto1").value.replace(",","."));
+			  var PDESCONTO6 = parseFloat( (VTOTALLIQUIDO6 * ((DESCONTO6)-12.5))/100 );
+			  var TOTAL6 = parseFloat(VTOTALLIQUIDO6) - parseFloat(PDESCONTO6);
+			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO6.toFixed(2);
+			  document.getElementById("total6").value = 'R$ ' + TOTAL6.toFixed(2);
+			  }
+
+			//  function verificaModalidade(){
+			//		var element = getElementById('eixo');
+			//		var element=document.getElementById('modali');
+			///		if(element.value=='5'){
+				//		element.style.display='block';
+			//		}
+			//		else{
+				//		element.style.display='none';
+			//		}
+			//	}
+
+			</script>
+
+		<link rel="stylesheet" href="../../../../../Styles/css/reset.css">
+		<link rel="stylesheet" href="../../../../../Styles/css/colegio.css">
+		<link rel="stylesheet" href="../../../../../Styles/css/bio.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+	</head>
+	<body>
+		<div class="Impressao">
+		<main class="break">
+			<header>
+			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">MENSALIDADES 2024 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ - DATA: <b id="date"></p></b></h1>
+         
+  <script>
+                   var currentDate  = new Date(),
+    currentDay   = currentDate.getDate() < 10 
+                 ? '0' + currentDate.getDate() 
+                 : currentDate.getDate(),
+    currentMonth = currentDate.getMonth() < 9 
+                 ? '0' + (currentDate.getMonth() + 1) 
+                 : (currentDate.getMonth() + 1);
+
+document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+            </script>
+			
+			</header>
+			<div  style="margin-top: 68px" class="ImgLogos">
+				<img id ="logo" src="../../../../../Styles/img/logo_escola_tecnica.png" width= "30" height= "30"/>
+			</div>
+			<div class="container" style="margin-left: 30px;" >
+			    <br>
+			
+				<div class="cursos" style="display: flex;">
+		
+			<label style="font-family: Arial; " id ="eixos" class="eixos" for="Eixos">Eixos:</label>
+			<select style="font-family: Arial; margin-right: 8px; " id="eixo" name="eixo" onchange="popular(this.id), limpar(),mostrar(eixo)">
+					<option selected="selected">Selecione...</option>
+					<option value="1">Agente de Observação de Segurança</option>
+					<option value="2">Assistente Administrativo</option>
+					<option value="3">Assistente de Contabilidade</option>
+					<option value="4">Assistende Logística</option>
+					<option value="5">Assistente de Recursos Humanos</option>
+					<option value="6">Assistente de Suporte e Manutenção de Computadores</option>
+					<option value="7">Atendente de Enfermagem</option>
+					<option value="8">Balconista de Farmácia</option>
+					<option value="9">Instalador de SIstemas de Acionamentos Elétricos</option>
+					<option value="10">Maquiador</option>
+					<option value="11">Operador de Terminais Portuários</option>
+					<option value="12">Organizador de Eventos</option>
+					<option value="13">Programador de Sistemas</option>
+					<option value="14">Recepcionista em Serviços de Saúde</option>
+					<option value="15">Vendedor</option>
+			</select>
+    				<label id="Cursos2" class="Cursos2" for="Cursos2" style="display: none; font-family: Arial">Modalidade:</label>
+					<select style="font-family: Arial; " id="curso" name="curso" onchange="atribuirValores(),limpar()" >
+					
+			
+			</select>
+			<button id="voltar" type="button" onclick="voltar(),limpar()" style=" width: 80px; height: 29px; font-size: 17px; float:inherit; margin-left: 5px;">Voltar</button>
+		</div>
+		<h3 style="font-size: 19px; font-family: Arial; margin-top: 12px" class="">Carga Horária: <b>400 horas</b></h3>
+		<div style="display: flex; flex-direction: row; margin-top: 8px;"><h3 style="font-size: 19px; font-family: Arial; margin-right: 5px;">CBO:  <h3 style="font-size: 19px; font-family: Arial; font-weight: 200;" id="CBO"></h3></h3></div>
+			<div style="display: flex; flex-direction: row; margin-top: 8px;"><h3 style="font-size: 19px; font-family: Arial; margin-right: 5px;">Horário:  <h3 style="font-size: 19px; font-family: Arial; font-weight: 200;" id="horario"></h3></h3></div>
+		</form>
+    
+	<br>
+              <h3 style="font-weight:bold; font-size: 22px; font-family: Arial; text-align: justify; width: 780px; margin-top: 12px;" class="">Disciplinas: </h3><br>
+							<p style="font-size: 19px; font-family: Arial;" id="Disciplinas"></p>
+
+							<h3 style="font-weight:bold; font-size: 22px; font-family: Arial; text-align: justify; width: 780px; margin-top: 12px" class="">Perfil Profissional: </h3><br>
+							<p style="font-size: 19px; font-family: Arial" id="Perfil"></p>
+
+							<h3 style="font-weight:bold; font-size: 22px; font-family: Arial; text-align: justify; width: 780px; margin-top: 12px" class="">Preço: </h3><br>
+							<p style="font-size: 19px; font-family: Arial" id="Preco"></p>
+
+	           <br>
+
+			
+			<div style="align-items: center; text-align: center; float:right; margin-right: 100px;" class="assinatura">
+		 _____________________________<br><br>
+			        Assinatura do Colaborador(a)
+			</div>
+		
+    	</div>
+		</main>
+		
+		
+		<footer class="rodape-pagina">
+			<img border="0" src="../../../../../Styles/img/Rodape.png" >
+		</footer>
+	</div>
+	</body>
+</html>
+

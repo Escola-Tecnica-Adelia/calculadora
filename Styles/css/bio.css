@@ -1,0 +1,21 @@
+.citacao-bio {
+  background-color: #d9e5e3;
+  border: 10px solid #c2ccca;
+  width: 250px;
+  box-sizing: border-box;
+  margin: 20px 40px;
+  padding: 20px;
+}
+
+.fiat {
+  float: right;
+}
+
+.petrobras {
+  float: left;
+}
+
+cite {
+  font-style: italic;
+  float: right;
+}

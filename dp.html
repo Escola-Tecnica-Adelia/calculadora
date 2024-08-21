@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora - Colégio Adélia</title>
+    <link rel="stylesheet" href="./Styles/css/reset.css" />
+    <link rel="stylesheet" href="./Styles/css/colegio.css" />
+    <link rel="stylesheet" href="./Styles/css/bio.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      header,
+      .container,
+      footer {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .form-container,
+      .plano-pagamento-container {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .btn-calcular {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #7fc981;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        text-shadow: none;
+      }
+      .btn-calcular:hover {
+        background-color: #45a049;
+      }
+      /* Estilos para os botões de rádio */
+      .plano-pagamento-item label {
+        margin-left: 10px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      .titulo-principal {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 1.5;
+        margin: 0;
+        flex-grow: 1;
+        text-align: center;
+      }
+      .data-emissao {
+        font-size: 18px;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .form-group {
+        margin: 10px 0;
+      }
+      .form-horizontal .control-label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .btn-calcular {
+        margin-top: 20px;
+      }
+      .plano-pagamento-container {
+        margin-top: 20px;
+      }
+      .plano-pagamento-item {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <header>
+      <div class="titulo-principal">
+        <h1>Calculo DP 2024 - COLÉGIO ADÉLIA</h1>
+        <div class="data-emissao">GUARUJÁ - DATA: <b id="date"></b></div>
+      </div>
+      <script>
+        var currentDate = new Date(),
+          currentDay =
+            currentDate.getDate() < 10
+              ? "0" + currentDate.getDate()
+              : currentDate.getDate(),
+          currentMonth =
+            currentDate.getMonth() < 9
+              ? "0" + (currentDate.getMonth() + 1)
+              : currentDate.getMonth() + 1;
+        document.getElementById("date").innerHTML =
+          currentDay + "/" + currentMonth + "/" + currentDate.getFullYear();
+      </script>
+    </header>
+    <div class="container">
+      <form class="form-horizontal">
+        <div class="form-container">
+          <div class="form-group">
+            <label
+              for="Mensalidade"
+              style="font-family: Arial, Helvetica, sans-serif"
+              >Mensalidade Integral:</label
+            >
+            <input
+              style="font-family: Arial, Helvetica, sans-serif"
+              type="text"
+              id="valor1"
+              value="R$ 552,00"
+              readonly
+              class="form-control input-md"
+            />
+          </div>
+
+          <div class="form-group">
+            <label
+              for="Porcentagem"
+              style="font-family: Arial, Helvetica, sans-serif"
+              >Porcentagem do Desconto:</label
+            >
+            <input
+              style="font-family: Arial, Helvetica, sans-serif"
+              type="text"
+              id="desconto1"
+              value="76.36%"
+              class="form-control input-md"
+            />
+          </div>
+
+          <div class="form-group">
+            <label
+              for="qt_aula"
+              style="font-family: Arial, Helvetica, sans-serif"
+              >Disciplinas:</label
+            >
+            <select
+              style="font-family: Arial, Helvetica, sans-serif"
+              id="qt_aula"
+              class="form-control"
+              onchange="calcValor()"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label
+              for="total2"
+              style="font-family: Arial, Helvetica, sans-serif"
+              >Valor da Mensalidade por disciplina:</label
+            >
+            <input
+              style="font-family: Arial, Helvetica, sans-serif"
+              type="text"
+              id="total2"
+              value="R$ 143,52"
+              readonly
+              class="form-control input-md"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <form class="form-horizontal">
+        <div class="form-container">
+          <!-- Campos do formulário anteriores -->
+          <div class="plano-pagamento-container">
+            <div class="plano-pagamento-item">
+              <input
+                type="radio"
+                id="opcao1"
+                name="planoPagamento"
+                value="vinculo"
+                onchange="calcValor()"
+              />
+              <label
+                for="opcao1"
+                style="font-family: Arial, Helvetica, sans-serif"
+                >Vínculo + 6 parcelas</label
+              >
+            </div>
+            <div class="plano-pagamento-item">
+              <input
+                type="radio"
+                id="opcao2"
+                name="planoPagamento"
+                value="seteParcelas"
+                onchange="calcValor()"
+              />
+              <label
+                for="opcao2"
+                style="font-family: Arial, Helvetica, sans-serif"
+                >7 parcelas</label
+              >
+            </div>
+          </div>
+          <div class="plano-pagamento-container">
+            <p style="font-size: 24px; font-weight: bold; margin-bottom: 12px">
+              Plano de Pagamento
+            </p>
+            <div class="plano-pagamento-item">
+              <label style="font-size: 20px">Entrada: </label>
+              <span style="font-size: 20px" id="entrada">R$ 0,00</span>
+            </div>
+            <div class="plano-pagamento-item">
+              <label style="font-size: 20px">Parcelas: </label>
+              <span style="font-size: 20px" id="parcelas"
+                >0 parcelas de R$ 0,00</span
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function calcValor() {
+        var disciplinas = parseInt(document.getElementById("qt_aula").value);
+        var total = 143.52 * disciplinas;
+
+        var plano = document.querySelector(
+          'input[name="planoPagamento"]:checked'
+        )?.value;
+        var valorEntrada, numParcelas, valorParcelas;
+
+        if (plano === "vinculo") {
+          valorEntrada = 397.44;
+          numParcelas = 6;
+        } else if (plano === "seteParcelas") {
+          valorEntrada = 0;
+          numParcelas = 7;
+        } else {
+          valorEntrada = 0;
+          numParcelas = 0;
+        }
+
+        valorParcelas = total;
+
+        document.getElementById("entrada").textContent =
+          "R$ " + valorEntrada.toFixed(2);
+        document.getElementById("parcelas").textContent =
+          numParcelas + " parcelas de R$ " + valorParcelas.toFixed(2);
+      }
+    </script>
+
+    <footer class="rodape-pagina">
+      <img border="0" src="./Styles/img/Rodape.png" />
+    </footer>
+  </body>
+</html>
