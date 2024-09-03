@@ -6,18 +6,18 @@ on:
       - main
 
 jobs:
-  deploy:
+  ftp-deploy:
+    name: FTP Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    - name: Deploy to cPanel
-      run: |
-        rsync -avz --delete-after --exclude '.git' ./ user@cpanel_server:/home2/coleg879/public_html/calculadora
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          ftp-server: ftp.colegioadelia.com.br
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          remote-dir: /home2/coleg879/calculadora.colegioadelia.com.br/
