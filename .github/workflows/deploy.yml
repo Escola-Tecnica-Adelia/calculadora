@@ -16,8 +16,9 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp-server: ftp.colegioadelia.com.br
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ftp.colegioadelia.com.br
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          remote-dir: /home2/coleg879/calculadora.colegioadelia.com.br/
+          server-dir: /home2/coleg879/calculadora.colegioadelia.com.br/
+          protocol: ftp
