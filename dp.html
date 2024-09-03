@@ -83,6 +83,7 @@
         margin-bottom: 10px;
       }
     </style>
+
   </head>
   <body style="margin: 0; padding: 0">
     <header>
@@ -127,8 +128,7 @@
             <label
               for="Porcentagem"
               style="font-family: Arial, Helvetica, sans-serif"
-              >Porcentagem do Desconto:</label
-            >
+              >Porcentagem do Desconto:</label>
             <input
               style="font-family: Arial, Helvetica, sans-serif"
               type="text"
@@ -247,7 +247,7 @@
             <div class="plano-pagamento-item">
               <label style="font-size: 20px">Parcelas: </label>
               <span style="font-size: 20px" id="parcelas"
-                >0 parcelas de R$ 0,00</span
+                >0 parcelas de R$ 143,52</span
               >
             </div>
           </div>
@@ -255,33 +255,33 @@
       </form>
     </div>
     <script>
-      function calcValor() {
-        var disciplinas = parseInt(document.getElementById("qt_aula").value);
-        var total = 143.52 * disciplinas;
+    function calcValor() {
+      var disciplinas = parseInt(document.getElementById("qt_aula").value);
+      var curso = document.getElementById("curso").value;
+      var total = parseFloat(curso.replace("R$", "").replace(",", ".")); 
 
-        var plano = document.querySelector(
-          'input[name="planoPagamento"]:checked'
-        )?.value;
-        var valorEntrada, numParcelas, valorParcelas;
+      var plano = document.querySelector('input[name="planoPagamento"]:checked')?.value;
+      var valorEntrada, numParcelas, valorParcelas;
 
-        if (plano === "vinculo") {
-          valorEntrada = 397.44;
-          numParcelas = 6;
-        } else if (plano === "seteParcelas") {
-          valorEntrada = 0;
-          numParcelas = 7;
-        } else {
-          valorEntrada = 0;
-          numParcelas = 0;
-        }
+      valorParcelas = total; 
 
-        valorParcelas = total;
-
-        document.getElementById("entrada").textContent =
-          "R$ " + valorEntrada.toFixed(2);
-        document.getElementById("parcelas").textContent =
-          numParcelas + " parcelas de R$ " + valorParcelas.toFixed(2);
+      if (plano === "vinculo") {
+        valorEntrada = valorParcelas; 
+        numParcelas = 6;
+      } else if (plano === "seteParcelas") {
+        valorEntrada = 0; 
+        numParcelas = 7;
+      } else {
+        valorEntrada = 0;
+        numParcelas = 0;
       }
+
+      document.getElementById("entrada").textContent =
+        "R$ " + valorEntrada.toFixed(2).replace(".", ",");
+
+      document.getElementById("parcelas").textContent =
+        numParcelas + " parcelas de R$ " + (143.52 * disciplinas).toFixed(2).replace(".", ",");
+    }
     </script>
 
     <footer class="rodape-pagina">

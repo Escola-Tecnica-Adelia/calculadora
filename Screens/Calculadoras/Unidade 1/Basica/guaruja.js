@@ -28,10 +28,8 @@ var ApostilaMed1e2 =
 var ApostilaMed3 =
   "Apostilas: R$ 2.800,00 Esse valor pode ser dividido em até 12x de R$ 233,34 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
 var ApostilaMed4 = "";
-var IdadeRecreacaoInfantil =
-  "Idade para matrícula: | Recreação Infantil II - 3 anos, até 31 de março do ano letivo. | Recreação Infantil III - 4 anos, até 31 de março do ano letivo. | Recreação Infantil IV - 5 anos, até 31 de março do ano letivo.";
-var IdadeRecreacaoInfantilVespertino =
-    "Idade para matrícula: | Recreação Infantil I - 1 ano e 6 meses, até 1 de fevereiro do ano letivo. | Recreação Infantil II - 3 anos, até 31 de março do ano letivo. | Recreação Infantil III - 4 anos, até 31 de março do ano letivo. | Recreação Infantil IV - 5 anos, até 31 de março do ano letivo.";
+var IdadeRecreacaoInfantil = "";
+var IdadeRecreacaoInfantilVespertino = "";
 var IdadeEducacaoInfantil =
     "Idade para matrícula: | Educação Infantil I - 2 anos, até 31 de março do ano letivo.. | Educação Infantil II - 3 anos, até 31 de março do ano letivo. | Educação Infantil III - 4 anos, até 31 de março do ano letivo. | Educação Infantil IV - 5 anos, até 31 de março do ano letivo.";
 var cursos = [
