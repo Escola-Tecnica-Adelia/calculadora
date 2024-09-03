@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /home2/coleg879/calculadora.colegioadelia.com.br/
+          server-dir: /calculadora.colegioadelia.com.br
           protocol: ftp
