@@ -143,7 +143,6 @@
 					var opcaoCurso = cursos; // intancio um array com minha base de dados
 					
 					var cx2 = document.getElementById("curso");	
-					var divTabelaValores = document.getElementById("tabela_valores_fic");
 					var divPagina2 = document.getElementById("pagina2");
 
 					for( i = 0; i < opcaoCurso.length; i++){
@@ -164,35 +163,10 @@
   								li.appendChild(document.createTextNode(docs[x]));
   								ul.appendChild(li);
 							}
-							
-						switch (cx2.value) {
-                            case "16":
-                            case "19":
-                                divTabelaValores.style.display = "block";
-                                divPagina2.style.display = "block";
-                                break;
-                            case "17":
-                                divPagina2.style.display = "block";
-                                divTabelaValores.style.display = "none";
-                                break;
-                            default:
-                                divTabelaValores.style.display = "none";
-                                divPagina2.style.display = "none";
-                                break;
-                        }
-
-
-
-						
-								
-				  			break;
-				  		}
-							
-
+						}
 				  	}
 
 					for( i = 0; i < opcaoCurso.length; i++){
-
 				  		if(opcaoCurso[i].cod == cx2.value){
 
 				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
@@ -210,10 +184,8 @@
 				  			break;
 				  		}
 
-				  	}
-
-							
-				  	for( i = 0; i < opcaoCurso.length; i++){
+				  	}					
+				  for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
 
@@ -233,8 +205,7 @@
 				  		}
 
 				  	}
-
-				  	for( i = 0; i < opcaoCurso.length; i++){
+				  for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
 
@@ -254,7 +225,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -275,7 +245,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -296,7 +265,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -317,8 +285,6 @@
 				  		}
 
 				  	}
-
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -606,15 +572,12 @@
 				  	}  	
 				  }
 
-				  function limparLista(ul){
+				function limparLista(ul){
 				  	while (ul.firstChild) {
     							ul.removeChild(ul.firstChild);
   							}
 
   					}
-
-				  
-
 
 			function calcValor(){
 			  // zerando total
@@ -651,18 +614,6 @@
 			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO6.toFixed(2);
 			  document.getElementById("total6").value = 'R$ ' + TOTAL6.toFixed(2);
 			  }
-
-			//  function verificaModalidade(){
-			//		var element = getElementById('eixo');
-			//		var element=document.getElementById('modali');
-			///		if(element.value=='5'){
-				//		element.style.display='block';
-			//		}
-			//		else{
-				//		element.style.display='none';
-			//		}
-			//	}
-
 			</script>
 
 		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
@@ -804,96 +755,7 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 					}
 				</style>
 
-			<div id="tabela_valores_fic" style="display: none;">
-			<h3 style="font-weight: bold; font-size: 16px; font-family: Roboto; margin-bottom: 12px; line-height: 1.3;" class="">
-				De acordo com o Novo Ensino Médio, os alunos da 1ª SÉRIE precisarão cursar 400 horas de qualificação profissional, devendo escolher uma das seguintes opções:
-			</h3>
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Certificação</th>
-							<th>EAD</th>
-							<th>Presencial</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>Atendente de Enfermagem</td>
-						<td class="center"></td>
-						<td class="rows border center">Entrada de R$ 120,00 + 8x de R$ 397,44</td>
-					</tr>
-					<tr>
-						<td>Agente de Observação de Segurança</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Assistente de Logística</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Assistente de Recursos Humanos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Assistente de Suporte e Manutenção de Computadores</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Balconista de Farmácia</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Instalador de Sistemas de Acionamentos Elétricos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-						<tr>
-						<td>Operador de Terminais Portuários</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Assistente Administrativo</td>
-						<td class="center">12x de R$ 93,00</td>		
-						<td></td>			
-					</tr>
-					<tr>
-						<td>Assistente de Contabilidade</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center"></td>
-					</tr>	
-					<tr>
-						<td>Maquiador</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Organizador de Eventos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Programador de Sistemas</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Recepcionista em Serviços de Saúde</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Vendedor</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-				</table>
-			</div>
-			
+
       <h3 style="font-weight:bold; font-size: 16px; font-family: Roboto; margin-top: 12px;" id="TextoSegundaMensalidade">
 			</h3>
 
@@ -929,16 +791,6 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 	</div>
 
 	<!--_________________________________________PÁGINA 2___________________________________________-->
-	
-	<main class="break" id="pagina2">
-		<h1 style="font-weight: bold; font-size: 32px; text-align: center;" class="titulo-principal">MATRIZ CURRICULAR 2024 - 1ª SÉRIE</h1>
-		<div style="display: flex; justify-content: center; align-items: center;">
-			<img style="margin-top: 26px;" src="./horario.png">
-		</div>
-	</main>
-<!--_________________________________________PÁGINA 3___________________________________________-->
-
-
 		<main class="break">
 			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">VANTAGENS 2024 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ </p> <b id="date"></b></h1>
 			<div class="container">

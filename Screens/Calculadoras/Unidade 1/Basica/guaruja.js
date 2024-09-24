@@ -1,43 +1,37 @@
-var descontInfantil = 51.4;
-var recreInfantilmat = 29.71;
-var recreInfantilvesp = 21.68;
-var descontFund1s1 = 60.97;
-var descontFund1s1ro = 65.96;
-var descontFund1s2 = 65.96;
-var descontFund1s345 = 55.06;
-var descontFund1s345n = 55.06;
-var descontFund2 = 59.74;
-var descontFund2n = 59.74;
-var descontMedioMat = 62.43;
-var descontMedioMatn = 62.43;
-var descontMedioVes = 62.43;
-var descontTecn75 = 50.0;
-var descontTecn77 = 77.8;
-var descontTecn72 = 20.0;
-var descontTecn76 = 37.0;
-var descontTecn78 = 90.769;
-var descontTecn71 = 0.0;
+var descontInfantil = 54.113;
+var recreInfantilmat = 28.463;
+var recreInfantilvesp = 22.009;
+var descontFund1s12 = 66.313;
+var descontFund1s345 = 59.722;
+var descontFund2 = 64.0346;
+var descontMedioMat = 66.4236;
+var descontMedioVes = 66.4236;
 var ApostilaInfantil =
-  "Apostilas: R$ 1.067,96 Esse valor pode ser dividido em até 12x de R$ 89,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 Pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
+  "Apostilas: R$ 1.218,00 Esse valor pode ser dividido em até 12x de R$ 101,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaFund1 =
-  "Apostilas:  R$ 1.973,35 Esse valor pode ser dividido em até 12x de R$ 164,44 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 Pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
+  "Apostilas:  R$ 2.244,00 Esse valor pode ser dividido em até 12x de R$ 187,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaFund2 =
-  "Apostilas:  R$ 2.301,74 Esse valor pode ser dividido em até 12x de R$ 191,81 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 Pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
+  "Apostilas:  R$ 2.613,00 Esse valor pode ser dividido em até 12x de R$ 217,75 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaMed1e2 =
-  "Apostilas: R$ 2.533,10 Esse valor pode ser dividido em até 12x de R$ 211,09 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
+  "Apostilas: R$ 2.874,00 Esse valor pode ser dividido em até 12x de R$ 239,05 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaMed3 =
-  "Apostilas: R$ 2.800,00 Esse valor pode ser dividido em até 12x de R$ 233,34 no Cartão de Crédito. | Antecipação da Anuidade: R$ 498,00 pode ser dividido em até 4x de R$124,50 no Cartão de Crédito.";
+  "Apostilas: R$ 3.180,00 Esse valor pode ser dividido em até 12x de R$ 265,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
+var SegundaMensalidadeEducacaoInfantil = "- Até o dia 1º R$ 601,48 | - Até o dia 7º R$ 631,56| - Até o dia 25º R$ 751,86";
+var SegundaMensalidadeFundamental1 = "- Até o dia 1º R$ 819,31 | - Até o dia 7º R$ 860,28| - Até o dia 25º R$ 1024,14";
+var SegundaMensalidadeFundamental2 = "- Até o dia 1º R$ 1017,64 | - Até o dia 7º R$ 1068,53| - Até o dia 25º R$ 1272,05";
+var SegundaMensalidadeEnsinoMedio = "- Até o dia 1º R$ 1197,27 | - Até o dia 7º R$ 1257,13| - Até o dia 25º R$ 1496,59";
 var ApostilaMed4 = "";
 var IdadeRecreacaoInfantil = "";
 var IdadeRecreacaoInfantilVespertino = "";
 var IdadeEducacaoInfantil =
     "Idade para matrícula: | Educação Infantil I - 2 anos, até 31 de março do ano letivo.. | Educação Infantil II - 3 anos, até 31 de março do ano letivo. | Educação Infantil III - 4 anos, até 31 de março do ano letivo. | Educação Infantil IV - 5 anos, até 31 de março do ano letivo.";
 var cursos = [
+  //Recreação Infantil Matutino
   {
     cod: 955,
     curso: "Recreação Infantil Matutino",
     categoria: 6,
-    valorIntegral: 498.0,
+    valorIntegral: 557.76,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
@@ -74,12 +68,12 @@ var cursos = [
     vtg10:
       "10 - O uso do uniforme é obrigatório para que não se tenha comparações entre as crianças.",
   },
-
+  //Recreação Infantil Vespertino
   {
     cod: 988,
     curso: "Recreação Infantil Vespertino",
     categoria: 6,
-    valorIntegral: 498.0,
+    valorIntegral: 557.76,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
@@ -116,11 +110,12 @@ var cursos = [
     vtg10:
       "10 - O uso do uniforme é obrigatório para que não se tenha comparações entre as crianças.",
   },
+  //Infantil - Vespertino
   {
     cod: 6,
     curso: "Infantil - Vespertino",
     categoria: 1,
-    valorIntegral: 1074.08,
+    valorIntegral: 1202.97,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
@@ -129,8 +124,7 @@ var cursos = [
     idadeMatricula: IdadeEducacaoInfantil,
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 537,04 | - Até o dia 7º R$ 563,92| - Até o dia 25º R$ 671,30",
+    SegundaMensalidade: SegundaMensalidadeEducacaoInfantil,
     horaAula: "",
     desconto: descontInfantil,
 
@@ -159,11 +153,12 @@ var cursos = [
     vtg10:
       "10 — O boletim (relatório bimestral) dos alunos da Educação Infantil, informa aos responsáveis o desenvolvimento psicopedagógico.",
   },
+  //1° Ano do Ensino Fundamental I
   {
     cod: 7,
     curso: "1° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
     docResp:
@@ -173,10 +168,9 @@ var cursos = [
       "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
-    desconto: descontFund1s1ro,
+    desconto: descontFund1s12,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
@@ -204,11 +198,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //1° Ano do Ensino Fundamental I Casa
   {
     cod: 789,
     curso: "1° Ano do Ensino Fundamental I Casa",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
     docResp:
@@ -218,10 +213,9 @@ var cursos = [
       "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
-    desconto: descontFund1s1ro,
+    desconto: descontFund1s12,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
@@ -249,12 +243,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
-
+  //2° Ano do Ensino Fundamental I
   {
     cod: 8,
     curso: "2° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação ",
     docResp:
@@ -264,10 +258,9 @@ var cursos = [
       "Idade para Matrícula: |2º Ano - 7 anos, até 31 de março do ano letivo e ter concluído o primeiro ano do Ensino Fundamental.",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
-    desconto: descontFund1s2,
+    desconto: descontFund1s12,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
@@ -295,11 +288,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //3° Ano do Ensino Fundamental I
   {
     cod: 9,
     curso: "3° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -308,8 +302,7 @@ var cursos = [
     idadeMatricula: "",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
@@ -339,11 +332,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //4° Ano do Ensino Fundamental I
   {
     cod: 10,
     curso: "4° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -383,11 +377,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //5° Ano do Ensino Fundamental I
   {
     cod: 11,
     curso: "5° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -427,11 +422,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //6° Ano do Ensino Fundamental II
   {
     cod: 12,
     curso: "6° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -471,11 +467,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //7° Ano do Ensino Fundamental II
   {
     cod: 13,
     curso: "7° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -515,11 +512,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //8° Ano do Ensino Fundamental II
   {
     cod: 14,
     curso: "8° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -559,11 +557,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //9° Ano do Ensino Fundamental II
   {
     cod: 15,
     curso: "9° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -603,11 +602,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //1° Ensino Médio - Matutino
   {
     cod: 16,
     curso: "1° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -645,11 +645,12 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
+  //2° Ensino Médio - Matutino
   {
     cod: 17,
     curso: "2° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -688,11 +689,12 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
+  //3° Ensino Médio - Matutino
   {
     cod: 18,
     curso: "3° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -731,11 +733,12 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
+  //1° Ensino Medio - Vespertino
   {
     cod: 19,
     curso: "1° Ensino Médio - Vespertino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -773,67 +776,4 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
-  /*
-
-{
-    cod: 20,	
-    curso:"2° Ensino Médio - Vespertino",
-    categoria: 4,
-    valorIntegral: 1620.30,
-    docAluno:"Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
-    docResp: "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaMed1e2,
-    idadeMatricula: "",	
-    SegundaMensalidade: "Até o dia 1º R$810,15 | Até o dia 7º R$850,65 | Até o dia 25º R$1012,68",
-    horaAula: "",
-    desconto: descontMedioVes,
-
-    vtgEixo:"ENSINO MÉDIO",
-    vtgLetivo:"",
-    vtgHorario:"Horário das Aulas | Manhã: 07h às 12h 20min. | Tarde: 12h e 40min às 18h.",
-    vtgVantagens:"Quais as vantagens de estudar no Colégio Adélia: ",
-     vtg01: "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
-        vtg02: "2 — As disciplinas são divididas por setores o que facilita para a compreensão dos alunos, por exemplo: Língua Portuguesa fica dividido através dos setores: Gramática, Literatura e Redação;",
-        vtg03: "3 — Salas amplas próprias ao ambiente escolar, corredores e horário de lanche sempre monitorados pelos inspetores;",
-        vtg04: "4 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
-        vtg05: "5 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
-        vtg06: "6 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-        vtg07: "7 — Os pais ou responsáveis podem visualizar ON-LINE ocorrências, boletim e até mesmo o financeiro através do terminal WEB, acompanhar a vida escolar do aluno ou importantes acontecimentos dentro da escola;",
-        vtg08: "8 — Plurall: Inovação tecnológica para realização de tarefas por aplicativo de celular ou pela Web. Além das tarefas, disponibiliza plantão de dúvidas, com monitores virtuais, para responder toda e qualquer dúvida dos alunos formando um grande banco de dados para consulta;",
-        vtg09: "9 — Aplicações de SIMULADOS PROVA ENEM (durante o ano letivo);",
-        vtg10: "10 — O uso do uniforme é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-        vtg11: "11 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada."
-
-},
-{
-    cod: 21,	
-    curso:"3° Ensino Médio - Vespertino",
-    categoria: 4,
-    valorIntegral: 1620.30,
-    docAluno:"Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
-    docResp: "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaMed3,
-    idadeMatricula: "",	
-    Textodiasuteis:"Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo ",
-    SegundaMensalidade: "Até o dia 1º R$810,15 | Até o dia 7º R$850,65 | Até o dia 25º R$1012,68",
-    horaAula: "",
-    desconto: descontMedioVes,
-
-    tgEixo:"ENSINO MÉDIO",
-    vtgLetivo:"",
-    vtgHorario:"Horário das Aulas | Manhã: 07h às 12h 40min. | Tarde: 12h e 40min às 18h.",
-    vtgVantagens:"Quais as vantagens de estudar no Colégio Adélia: ",
-        vtg01: "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
-        vtg02: "2 — As disciplinas são divididas por setores o que facilita para a compreensão dos alunos, por exemplo: Língua Portuguesa fica dividido através dos setores: Gramática, Literatura e Redação;",
-        vtg03: "3 — Salas amplas próprias ao ambiente escolar, corredores e horário de lanche sempre monitorados pelos inspetores;",
-        vtg04: "4 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
-        vtg05: "5 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
-        vtg06: "6 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-        vtg07: "7 — Os pais ou responsáveis podem visualizar ON-LINE ocorrências, boletim e até mesmo o financeiro através do terminal WEB, acompanhar a vida escolar do aluno ou importantes acontecimentos dentro da escola;",
-        vtg08: "8 — Plurall: Inovação tecnológica para realização de tarefas por aplicativo de celular ou pela Web. Além das tarefas, disponibiliza plantão de dúvidas, com monitores virtuais, para responder toda e qualquer dúvida dos alunos formando um grande banco de dados para consulta;",
-        vtg09: "9 — Aplicações de SIMULADOS PROVA ENEM (durante o ano letivo);",
-        vtg10: "10 — O uso do uniforme é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-        vtg11: "11 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada."
-},
-*/
 ];
