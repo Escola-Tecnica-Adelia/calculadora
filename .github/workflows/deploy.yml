@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /homologacao.calculadora.colegioadelia.com.br/
+          server-dir: /homologacaocalculadora.colegioadelia.com.br/
           protocol: ftp
 
   ftp-deploy-main:
