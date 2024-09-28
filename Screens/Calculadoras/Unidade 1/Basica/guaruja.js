@@ -4,8 +4,8 @@ var recreInfantilvesp = 22.009;
 var descontFund1s12 = 66.313;
 var descontFund1s345 = 59.722;
 var descontFund2 = 64.0346;
-var descontMedioMat = 66.4236;
-var descontMedioVes = 66.4236;
+var descontMedioMat = 66.4375;
+var descontMedioVes = 66.694;
 var ApostilaInfantil =
   "Apostilas: R$ 1.218,00 Esse valor pode ser dividido em até 12x de R$ 101,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaFund1 =
@@ -13,9 +13,11 @@ var ApostilaFund1 =
 var ApostilaFund2 =
   "Apostilas:  R$ 2.613,00 Esse valor pode ser dividido em até 12x de R$ 217,75 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaMed1e2 =
-  "Apostilas: R$ 2.874,00 Esse valor pode ser dividido em até 12x de R$ 239,05 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
+  "Apostilas: R$ 2.874,00 Esse valor pode ser dividido em até 12x de R$ 239,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaMed3 =
   "Apostilas: R$ 3.180,00 Esse valor pode ser dividido em até 12x de R$ 265,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
+var ApostilaMed1vesp =
+  "Apostilas: R$ 2.743,50 Esse valor pode ser dividido em até 12x de R$ 228,63 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var SegundaMensalidadeEducacaoInfantil = "- Até o dia 1º R$ 601,48 | - Até o dia 7º R$ 631,56| - Até o dia 25º R$ 751,86";
 var SegundaMensalidadeFundamental1 = "- Até o dia 1º R$ 819,31 | - Até o dia 7º R$ 860,28| - Até o dia 25º R$ 1024,14";
 var SegundaMensalidadeFundamental2 = "- Até o dia 1º R$ 1017,64 | - Até o dia 7º R$ 1068,53| - Até o dia 25º R$ 1272,05";
@@ -743,11 +745,11 @@ var cursos = [
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaMed1e2,
+    valorApostila: ApostilaMed1vesp,
     idadeMatricula: "",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso.",
-    SegundaMensalidade: "",
+    SegundaMensalidade: "- Até o dia 1º R$ 1.069,00 | - Até o dia 7º R$ 1.122,44 | - Até o dia 25º R$ 1.336,24",
     horaAula: "",
     desconto: descontMedioVes,
 
