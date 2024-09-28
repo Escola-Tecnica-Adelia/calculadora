@@ -14,633 +14,107 @@
 		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
     
     <style media="print">
- @page {
-  size: auto;
-  margin: 0;
-       }
-	   ul{
-			font-family: Roboto;
-	   }
-</style>
+				@page {
+					size: auto;
+					margin: 0;
+							}
+						ul{
+							font-family: Roboto;
+						}
+		</style>
+    <!-- JavaScript Code -->
+    <script type="text/javascript">
+			var cursos = [
+					{
+							cod: 22,
+							curso: "Administração",
+							valorIntegral: 615,
+							desconto: 49.09,
+							valorApostila: "- Entrada de R$120,00 no ato da matrícula + 14 parcelas mensais.",
+							docAluno: "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Carteirinha de Vacinação |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
+							docResp: "Responsáveis: |- RG |- CPF |- Comprovante de residência",
+					},
+					{
+							cod: 99,
+							curso: "Eletrotécnica",
+							valorIntegral: 615,
+							desconto: 44.00,
+							valorApostila: "- Entrada de R$120,00 no ato da matrícula + 21 parcelas mensais.",
+							docAluno: "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Carteirinha de Vacinação |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
+							docResp: "Responsáveis: |- RG |- CPF |- Comprovante de residência",
+					},
+					// ... Add other courses here
+			];
 
-            <script type="text/javascript">
-				var imported = document.createElement('script');
-				imported.src = 'pro_guaruja.js';
-				document.head.appendChild(imported); 
-    
-
-    
-			
-
-			function mostrar(a){
-				var x=a.value;
-				if(x==5){
-				document.getElementById("modalidade").style.display='block'
-				document.getElementById("flex").style.display='block'
-				document.getElementById("eixo").style.display='none'
-				document.getElementById("eixos").style.display='none'
-				document.getElementById("curso").style.display='block'
-			    document.getElementById("Cursos2").style.display='block'
-				document.getElementById("valor1").value="";
-				document.getElementById("desconto1").value="";
-				document.getElementById("curso").value=5;
+			function populateCourseSelect() {
+					var cursoSelect = document.getElementById('curso');
+					cursoSelect.innerHTML = "<option selected='selected'>Selecione...</option>";
+					for (var i = 0; i < cursos.length; i++) {
+							var option = document.createElement("option");
+							option.text = cursos[i].curso;
+							option.value = cursos[i].cod;
+							cursoSelect.add(option);
 					}
-				else{
-					
-				document.getElementById("modal").style.display='none'
-				
-				}
-				} 
-
-				function mostrar1(a){
-				var x=a.value;
-				if(x!=0){
-				document.getElementById("curso").style.display='block'
-			
-					}
-				else{
-				document.getElementById("modal").style.display='none'
-				}
-				}
-				
-				function voltar(){
-					
-				document.getElementById("modalidade").style.display='none'
-				document.getElementById("flex").style.display='none'
-				document.getElementById("Cursos2").style.display='none'
-				document.getElementById("eixo").style.display='block'
-				document.getElementById("eixos").style.display='block'
-				document.getElementById("curso").style.display='block'
-				document.getElementById("eixo").value="";
-				document.getElementById("curso").value=1;
-				document.getElementById("valor1").value="";
-				document.getElementById("desconto1").value="";
-			    document.getElementById("Cursos2").style.display='none'
-			
-				document.getElementById("flex").value=12;
-				}
-
-				function limpar(){
-					document.getElementById("total1").value="";
-					document.getElementById("total2").value="";
-					document.getElementById("total6").value="";
-				}
-
-
-				function popular(caixa1){
-				  	var cx1 = document.getElementById(caixa1);
-				  	var cx2 = document.getElementById('curso');	
-				  	cx2.innerHTML = "";
-
-				  	var opcaoCurso = cursos;
-
-				  	console.log(opcaoCurso);
-
-
-				
-					  for( i = 0; i < opcaoCurso.length; i++){
-
-						if(opcaoCurso[i].categoria == cx1.value){
-	
-						var textoCurso  = opcaoCurso[i].curso;
-						var codigoCurso = opcaoCurso[i].cod;
-						var novaOpcao   = document.createElement("option");
-	
-						novaOpcao.text  = textoCurso;
-					novaOpcao.value = codigoCurso;
-					cx2.options.add(novaOpcao);
-					}
-
-
-}
-				
-
-
-                    function popular1(caixa1){
-				  	var cx1 = document.getElementById(caixa1);
-				  	var cx2 = document.getElementById('curso');	
-				  	cx2.innerHTML = "";
-
-				  	var opcaoCurso = cursos;
-
-				  	console.log(opcaoCurso);
-
-
-				
-					  for( i = 0; i < opcaoCurso.length; i++){
-
-						if(opcaoCurso[i].flex == cx1.value){
-	
-						var textoCurso  = opcaoCurso[i].curso;
-						var codigoCurso = opcaoCurso[i].cod;
-						var novaOpcao   = document.createElement("option");
-	
-						novaOpcao.text  = textoCurso;
-					novaOpcao.value = codigoCurso;
-					cx2.options.add(novaOpcao);
-					}
-
-
-				}
 			}
 
-				function atribuirValores2(){
-					
-					
-				  	
-				}
+			function updateCourseInfo() {
+					var cursoSelect = document.getElementById("curso");
+					var selectedCod = cursoSelect.value;
+					for (var i = 0; i < cursos.length; i++) {
+							if (cursos[i].cod == selectedCod) {
+									document.getElementById('valor1').value = cursos[i].valorIntegral;
+									document.getElementById('desconto1').value = cursos[i].desconto;
+									document.getElementById('paymentInfo').value = cursos[i].valorApostila;
 
+									// Update document requirements for Aluno
+									var alunoDocs = cursos[i].docAluno.split("|");
+									document.getElementById('AlunoIdTitle').value = alunoDocs[0];
+									document.getElementById('AlunoIdRG').value = alunoDocs[1];
+									document.getElementById('AlunoIdCPF').value = alunoDocs[2];
+									document.getElementById('AlunoIdCNC').value = alunoDocs[3];
+									document.getElementById('AlunoIdCV').value = alunoDocs[4];
+									document.getElementById('AlunoIdCR').value = alunoDocs[5];
+									document.getElementById('AlunoIdFoto').value = alunoDocs[6];
+									document.getElementById('AlunoIdHEF').value = alunoDocs[7];
+									document.getElementById('AlunoIdHEM').value = alunoDocs[8];
 
+									// Update document requirements for Responsáveis
+									var respDocs = cursos[i].docResp.split("|");
+									document.getElementById('RespIdTitle').value = respDocs[0];
+									document.getElementById('RespIdRG').value = respDocs[1];
+									document.getElementById('RespIdCPF').value = respDocs[2];
+									document.getElementById('RespIDCR').value = respDocs[3];
 
-
-
-
-				atribuirValores();
-
-				}
-
-				function atribuirValores(){
-					var opcaoCurso = cursos; // intancio um array com minha base de dados
-					
-					var cx2 = document.getElementById("curso");	
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			//document.getElementById('horario').value = opcaoCurso[i].horario;
-				  			//alert(opcaoCurso[i].docAluno);
-				  			//document.getElementById('docAluno').value = opcaoCurso[i].docAluno;
-				  			//document.getElementById('docresp').value = opcaoCurso[i].docResp;
-				  			var ul = document.getElementById("docResp");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].docResp;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
+									break;
 							}
-
-				  			break;
-				  		}
-
-				  	}
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("idadeMatricula");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].idadeMatricula;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-
-				  	}
-				  	
-				  	for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("SegundaMensalidade");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].SegundaMensalidade;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-
-				  	}
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("docAluno");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].docAluno;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-
-				  	}
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("valorApostila");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].valorApostila;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-
-				  	}
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("horaAula");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].horaAula;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-
-				  	}
-
-
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtgEixo");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtgEixo;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtgLetivo");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtgLetivo;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtgHorario");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtgHorario;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtgVantagens");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtgVantagens;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg01");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg01;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg02");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg02;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg03");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg03;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg04");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg04;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg05");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg05;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg06");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg06;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg07");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg07;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg08");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg08;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg09");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg09;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-					for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg10");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg10;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-                    for( i = 0; i < opcaoCurso.length; i++){
-
-				  		if(opcaoCurso[i].cod == cx2.value){
-
-				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
-				  			document.getElementById('desconto1').value = opcaoCurso[i].desconto;
-				  			var ul = document.getElementById("vtg11");
-				  			limparLista(ul);
-				  			var str =  opcaoCurso[i].vtg11;
-							var docs = str.split("|");
- 							for(x = 0; x < docs.length; x++ ){
-  								var li = document.createElement("li");
-  								li.appendChild(document.createTextNode(docs[x]));
-  								ul.appendChild(li);
-							}
-
-				  			break;
-				  		}
-				  	}
-				  	
-				  }
-
-				  function limparLista(ul){
-				  	while (ul.firstChild) {
-    							ul.removeChild(ul.firstChild);
-  							}
-
-  					}
-
-				  
-
-
-			function calcValor(){
-			  // zerando total
-			  document.getElementById("total1").value = '0';
-			  // valor líquido
-			  var VTOTALLIQUIDO1 = parseFloat(document.getElementById("valor1").value);
-			  // desconto 1 - porcentagem
-			  var descont = document.getElementById("desconto1").value.replace(",",".");
-			
-			  
-			  var DESCONTO1 = descont;
-			  var PDESCONTO1 = parseFloat( (VTOTALLIQUIDO1 * (DESCONTO1))/100 );
-			  var TOTAL1 = parseFloat(VTOTALLIQUIDO1) - parseFloat(PDESCONTO1);
-			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO1.toFixed(2);
-			  document.getElementById("total1").value = 'R$ ' + TOTAL1.toFixed(2);
-			  // zerando total
-			  document.getElementById("total2").value = '0';
-			  // valor líquido
-			  var VTOTALLIQUIDO2 = parseFloat(document.getElementById("valor1").value);
-			  // desconto 2 - porcentagem
-			  var DESCONTO2 = parseFloat(document.getElementById("desconto1").value.replace(",","."));
-			  var PDESCONTO2 = parseFloat( (VTOTALLIQUIDO2 * ((DESCONTO2)-2.5))/100);
-			  var TOTAL2 = parseFloat(VTOTALLIQUIDO2) - parseFloat(PDESCONTO2);
-			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO2.toFixed(2);
-			  document.getElementById("total2").value = 'R$ ' + TOTAL2.toFixed(2);
-			  // zerando total
-			  document.getElementById("total6").value = '0';
-			  // valor líquido
-			  var VTOTALLIQUIDO6 = parseFloat(document.getElementById("valor1").value);
-			  // desconto 6 - porcentagem
-			  var DESCONTO6 = parseFloat(document.getElementById("desconto1").value.replace(",","."));
-			  var PDESCONTO6 = parseFloat( (VTOTALLIQUIDO6 * ((DESCONTO6)-12.5))/100 );
-			  var TOTAL6 = parseFloat(VTOTALLIQUIDO6) - parseFloat(PDESCONTO6);
-			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO6.toFixed(2);
-			  document.getElementById("total6").value = 'R$ ' + TOTAL6.toFixed(2);
-			  }
-
-			//  function verificaModalidade(){
-			//		var element = getElementById('eixo');
-			//		var element=document.getElementById('modali');
-			///		if(element.value=='5'){
-				//		element.style.display='block';
-			//		}
-			//		else{
-				//		element.style.display='none';
-			//		}
-			//	}
-
-			</script>
+					}
+			}
+
+			function resetTotals() {
+					document.getElementById("total1").value = "";
+					document.getElementById("total2").value = "";
+					document.getElementById("total6").value = "";
+			}
+
+			function calculateValues() {
+					var valorIntegral = parseFloat(document.getElementById("valor1").value);
+					var desconto = parseFloat(document.getElementById("desconto1").value.replace(",", "."));
+
+					var total1 = valorIntegral - (valorIntegral * desconto / 100);
+					document.getElementById("total1").value = 'R$ ' + total1.toFixed(2);
+
+					var total2 = valorIntegral - (valorIntegral * (desconto - 2.5) / 100);
+					document.getElementById("total2").value = 'R$ ' + total2.toFixed(2);
+
+					var total6 = valorIntegral - (valorIntegral * (desconto - 12.5) / 100);
+					document.getElementById("total6").value = 'R$ ' + total6.toFixed(2);
+			}
+
+			window.onload = function () {
+					populateCourseSelect();
+			};
+	</script>
+    
 
 		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
 		<link rel="stylesheet" href="../../../../Styles/css/colegio.css">
@@ -648,22 +122,17 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 	</head>
+
 	<body>
 		<main class="break">
 			<header>
 			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal" class="titulo-principal">MENSALIDADES 2024 - COLÉGIO ADÉLIA - UNIDADE I <p>SANTA ROSA - GUARUJÁ - DATA: <b id="date"></p></b></h1>
          
-  <script>
-                   var currentDate  = new Date(),
-    currentDay   = currentDate.getDate() < 10 
-                 ? '0' + currentDate.getDate() 
-                 : currentDate.getDate(),
-    currentMonth = currentDate.getMonth() < 9 
-                 ? '0' + (currentDate.getMonth() + 1) 
-                 : (currentDate.getMonth() + 1);
+  		<script>
+             var currentDate  = new Date(), currentDay   = currentDate.getDate() < 10 ? '0' + currentDate.getDate()  : currentDate.getDate(), currentMonth = currentDate.getMonth() < 9 ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
 
-document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
-            </script>
+						document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+      </script>
 			
 			
 			
@@ -680,8 +149,8 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 				<select id="flex" name="modalidades" onchange=" update(),popular(this.id),limpar(),mostrar1(flex)" style="display: none; right: 100px; margin-right: 5px;font-family: Roboto">
 					<option selected="selected">Selecione...</option>
 					<option value="30">Administração</option>
-				    <!--	<option value="19">Eletrônica</option>-->
-				    <option value="99">Eletrotécnica</option>
+				  <option value="19">Eletrônica</option>
+				  <option value="99">Eletrotécnica</option>
 					<option value="14">Enfermagem</option>
 					<option value="31">Reciclagem de Enfermagem</option>
 					<!--	<option value="19">Estética</option>-->

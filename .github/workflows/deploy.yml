@@ -4,16 +4,36 @@ on:
   push:
     branches:
       - main
+      - develop
 
 jobs:
-  ftp-deploy:
-    name: FTP Deploy
+  ftp-deploy-develop:
+    name: FTP Deploy to Homologation
+    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: FTP Deploy
+      - name: FTP Deploy to Homologation
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ftp.colegioadelia.com.br
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /homologacao.calculadora.colegioadelia.com.br/
+          protocol: ftp
+
+  ftp-deploy-main:
+    name: FTP Deploy to Production
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: FTP Deploy to Production
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ftp.colegioadelia.com.br

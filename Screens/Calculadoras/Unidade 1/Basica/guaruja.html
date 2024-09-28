@@ -13,12 +13,12 @@
 		<link href="style.css" rel="stylesheet" type="text/css" media="screen">
 		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
 
-      <script type="text/javascript">
+    <script type="text/javascript">
 				var imported = document.createElement('script');
 				imported.src = 'guaruja.js';
 				document.head.appendChild(imported); 
 
-			function mostrar(a){
+				function mostrar(a){
 				var x=a.value;
 				console.log(x);
 				if(x==5){
@@ -70,16 +70,13 @@
 					document.getElementById("total6").value="";
 				}
 
-
 				function popular(caixa1){
 				  	var cx1 = document.getElementById(caixa1);
 				  	var cx2 = document.getElementById('curso');	
 				  	cx2.innerHTML = "";
 
 				  	var opcaoCurso = cursos;
-						
-				
-				
+		
 					  for( i = 0; i < opcaoCurso.length; i++){
 
 						if(opcaoCurso[i].categoria == cx1.value){
@@ -579,7 +576,7 @@
 
   					}
 
-			function calcValor(){
+				function calcValor(){
 			  // zerando total
 			  document.getElementById("total1").value = '0';
 			  // valor líquido
@@ -614,7 +611,7 @@
 			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO6.toFixed(2);
 			  document.getElementById("total6").value = 'R$ ' + TOTAL6.toFixed(2);
 			  }
-			</script>
+		</script>
 
 		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
 		<link rel="stylesheet" href="../../../../Styles/css/colegio.css">
@@ -622,6 +619,7 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 	</head>
+	
 	<body>
 		<div class="Impressao">
 		<main class="break">
