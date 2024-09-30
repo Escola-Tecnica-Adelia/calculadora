@@ -5,7 +5,7 @@ var descontFund1s12 = 66.313;
 var descontFund1s345 = 59.722;
 var descontFund2 = 64.0346;
 var descontMedioMat = 66.4375;
-var descontMedioVes = 66.694;
+var descontMedioVes = 68.68;
 var ApostilaInfantil =
   "Apostilas: R$ 1.218,00 Esse valor pode ser dividido em até 12x de R$ 101,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaFund1 =

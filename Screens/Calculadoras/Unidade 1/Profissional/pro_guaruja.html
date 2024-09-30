@@ -1,516 +1,340 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="robots" content="noindex">
-		<meta charset="UTF-8">
-		<link rel="shortcut icon" href="/img/colegio.png">
-		<title>Calculadora - Colégio Adélia</title>
-		<script type="text/javascript" script-name="anonymous-pro" src="http://use.edgefonts.net/anonymous-pro.js"></script>
-		<script type="text/javascript" script-name="cabin-condensed" src="http://use.edgefonts.net/cabin-condensed.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen">
-		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
-    
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/img/colegio.png">
+    <title>Calculadora - Colégio Adélia</title>
+    <script type="text/javascript" src="http://use.edgefonts.net/anonymous-pro.js"></script>
+    <script type="text/javascript" src="http://use.edgefonts.net/cabin-condensed.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="style_print.css" rel="stylesheet" type="text/css" media="print">
+
     <style media="print">
-				@page {
-					size: auto;
-					margin: 0;
-							}
-						ul{
-							font-family: Roboto;
-						}
-		</style>
+        @page {
+            size: auto;
+            margin: 0;
+        }
+        ul {
+            font-family: Roboto;
+        }
+    </style>
+
     <!-- JavaScript Code -->
     <script type="text/javascript">
-			var cursos = [
-					{
-							cod: 22,
-							curso: "Administração",
-							valorIntegral: 615,
-							desconto: 49.09,
-							valorApostila: "- Entrada de R$120,00 no ato da matrícula + 14 parcelas mensais.",
-							docAluno: "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Carteirinha de Vacinação |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
-							docResp: "Responsáveis: |- RG |- CPF |- Comprovante de residência",
-					},
-					{
-							cod: 99,
-							curso: "Eletrotécnica",
-							valorIntegral: 615,
-							desconto: 44.00,
-							valorApostila: "- Entrada de R$120,00 no ato da matrícula + 21 parcelas mensais.",
-							docAluno: "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Carteirinha de Vacinação |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
-							docResp: "Responsáveis: |- RG |- CPF |- Comprovante de residência",
-					},
-					// ... Add other courses here
-			];
+        var cursos = [
+            {
+                cod: 22,
+                curso: "Administração",
+                valorIntegral: 615,
+                desconto: 49.09,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 14 parcelas mensais."
+            },
+            {
+                cod: 24,
+                curso: "Eletrotécnica",
+                valorIntegral: 615,
+                desconto: 49.09,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            },
+            {
+                cod: 25,
+                curso: "Enfermagem",
+                valorIntegral: 615,
+                desconto: 28.00,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 24 parcelas mensais."
+            },
+            {
+                cod: 27,
+                curso: "Farmácia",
+                valorIntegral: 615,
+                desconto: 49.09,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            },
+            {
+                cod: 23,
+                curso: "Informática",
+                valorIntegral: 615,
+                desconto: 56.52,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            },
+            {
+                cod: 29,
+                curso: "Logística",
+                valorIntegral: 615,
+                desconto: 49.09,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            },
+            {
+                cod: 31,
+                curso: "Portos",
+                valorIntegral: 615,
+                desconto: 56.52,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            },
+            {
+                cod: 32,
+                curso: "Radiologia",
+                valorIntegral: 615,
+                desconto: 44.00,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 24 parcelas mensais."
+            },
+            {
+                cod: 33,
+                curso: "Segurança do Trabalho",
+                valorIntegral: 615,
+                desconto: 56.52,
+                valorApostila: "- Entrada de R$99,99 no ato da matrícula + 21 parcelas mensais."
+            }
+        ];
 
-			function populateCourseSelect() {
-					var cursoSelect = document.getElementById('curso');
-					cursoSelect.innerHTML = "<option selected='selected'>Selecione...</option>";
-					for (var i = 0; i < cursos.length; i++) {
-							var option = document.createElement("option");
-							option.text = cursos[i].curso;
-							option.value = cursos[i].cod;
-							cursoSelect.add(option);
-					}
-			}
+        function populateCourseSelect() {
+            var cursoSelect = document.getElementById('curso');
+            cursoSelect.innerHTML = "<option selected='selected'>Selecione...</option>";
+            for (var i = 0; i < cursos.length; i++) {
+                var option = document.createElement("option");
+                option.text = cursos[i].curso;
+                option.value = cursos[i].cod;
+                cursoSelect.add(option);
+            }
+        }
 
-			function updateCourseInfo() {
-					var cursoSelect = document.getElementById("curso");
-					var selectedCod = cursoSelect.value;
-					for (var i = 0; i < cursos.length; i++) {
-							if (cursos[i].cod == selectedCod) {
-									document.getElementById('valor1').value = cursos[i].valorIntegral;
-									document.getElementById('desconto1').value = cursos[i].desconto;
-									document.getElementById('paymentInfo').value = cursos[i].valorApostila;
+        function updateCourseInfo() {
+            var cursoSelect = document.getElementById("curso");
+            var selectedCod = cursoSelect.value;
+            for (var i = 0; i < cursos.length; i++) {
+                if (cursos[i].cod == selectedCod) {
+                    document.getElementById('valor1').value = cursos[i].valorIntegral;
+                    document.getElementById('desconto1').value = cursos[i].desconto;
+                    document.getElementById('Teste').value = cursos[i].valorApostila;
+                    break;
+                }
+            }
+            resetTotals();
+        }
 
-									// Update document requirements for Aluno
-									var alunoDocs = cursos[i].docAluno.split("|");
-									document.getElementById('AlunoIdTitle').value = alunoDocs[0];
-									document.getElementById('AlunoIdRG').value = alunoDocs[1];
-									document.getElementById('AlunoIdCPF').value = alunoDocs[2];
-									document.getElementById('AlunoIdCNC').value = alunoDocs[3];
-									document.getElementById('AlunoIdCV').value = alunoDocs[4];
-									document.getElementById('AlunoIdCR').value = alunoDocs[5];
-									document.getElementById('AlunoIdFoto').value = alunoDocs[6];
-									document.getElementById('AlunoIdHEF').value = alunoDocs[7];
-									document.getElementById('AlunoIdHEM').value = alunoDocs[8];
+        function resetTotals() {
+            document.getElementById("total1").value = "";
+            document.getElementById("total2").value = "";
+            document.getElementById("total6").value = "";
+        }
 
-									// Update document requirements for Responsáveis
-									var respDocs = cursos[i].docResp.split("|");
-									document.getElementById('RespIdTitle').value = respDocs[0];
-									document.getElementById('RespIdRG').value = respDocs[1];
-									document.getElementById('RespIdCPF').value = respDocs[2];
-									document.getElementById('RespIDCR').value = respDocs[3];
+        function calculateValues() {
+            var valorIntegral = parseFloat(document.getElementById("valor1").value);
+            var desconto = parseFloat(document.getElementById("desconto1").value);
 
-									break;
-							}
-					}
-			}
+            if (!isNaN(valorIntegral) && !isNaN(desconto)) {
+                var total1 = valorIntegral * (1 - desconto / 100);
+                document.getElementById("total1").value = 'R$ ' + total1.toFixed(2);
 
-			function resetTotals() {
-					document.getElementById("total1").value = "";
-					document.getElementById("total2").value = "";
-					document.getElementById("total6").value = "";
-			}
+                var total2 = valorIntegral * (1 - (desconto - 2.5) / 100);
+                document.getElementById("total2").value = 'R$ ' + total2.toFixed(2);
 
-			function calculateValues() {
-					var valorIntegral = parseFloat(document.getElementById("valor1").value);
-					var desconto = parseFloat(document.getElementById("desconto1").value.replace(",", "."));
+                var total6 = valorIntegral * (1 - (desconto - 12.5) / 100);
+                document.getElementById("total6").value = 'R$ ' + total6.toFixed(2);
+            } else {
+                alert("Por favor, selecione um curso e insira os valores corretamente.");
+            }
+        }
 
-					var total1 = valorIntegral - (valorIntegral * desconto / 100);
-					document.getElementById("total1").value = 'R$ ' + total1.toFixed(2);
+        window.onload = function () {
+            populateCourseSelect();
+            document.getElementById('curso').addEventListener('change', updateCourseInfo);
+        };
+    </script>
 
-					var total2 = valorIntegral - (valorIntegral * (desconto - 2.5) / 100);
-					document.getElementById("total2").value = 'R$ ' + total2.toFixed(2);
+    <link rel="stylesheet" href="../../../../Styles/css/reset.css">
+    <link rel="stylesheet" href="../../../../Styles/css/colegio.css">
+    <link rel="stylesheet" href="../../../../Styles/css/bio.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
 
-					var total6 = valorIntegral - (valorIntegral * (desconto - 12.5) / 100);
-					document.getElementById("total6").value = 'R$ ' + total6.toFixed(2);
-			}
+<body>
+    <main class="break">
+        <header>
+            <h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">MENSALIDADES 2024 - COLÉGIO ADÉLIA - UNIDADE I <p>SANTA ROSA - GUARUJÁ - DATA: <b id="date"></b></p></h1>
 
-			window.onload = function () {
-					populateCourseSelect();
-			};
-	</script>
-    
+            <script>
+                var currentDate = new Date(),
+                    currentDay = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDate.getDate(),
+                    currentMonth = currentDate.getMonth() < 9 ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
 
-		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
-		<link rel="stylesheet" href="../../../../Styles/css/colegio.css">
-		<link rel="stylesheet" href="../../../../Styles/css/bio.css">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
-	</head>
+                document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' + currentDate.getFullYear();
+            </script>
+        </header>
+        <div class="ImgLogos">
+            <img id="logo" src="../../../../Styles/img/logo_escola_tecnica.png" width="30" height="30" />
+        </div>
 
-	<body>
-		<main class="break">
-			<header>
-			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal" class="titulo-principal">MENSALIDADES 2024 - COLÉGIO ADÉLIA - UNIDADE I <p>SANTA ROSA - GUARUJÁ - DATA: <b id="date"></p></b></h1>
-         
-  		<script>
-             var currentDate  = new Date(), currentDay   = currentDate.getDate() < 10 ? '0' + currentDate.getDate()  : currentDate.getDate(), currentMonth = currentDate.getMonth() < 9 ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
-
-						document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
-      </script>
-			
-			
-			
-			</header>
-			<div class="ImgLogos">
-				<img id ="logo" src="../../../../Styles/img/logo_escola_tecnica.png" width= "30" height= "30"/>
-			</div>
-
-			<div class="container" style="margin-left: 30px;" >
-			    <br>
-			
-				<div class="cursos" style="display: flex;">
-				<label id="modalidade" class="modalidade" for="Modalidade" style="display: none; font-family: Roboto">Curso:</label>
-				<select id="flex" name="modalidades" onchange=" update(),popular(this.id),limpar(),mostrar1(flex)" style="display: none; right: 100px; margin-right: 5px;font-family: Roboto">
-					<option selected="selected">Selecione...</option>
-					<option value="30">Administração</option>
-				  <option value="19">Eletrônica</option>
-				  <option value="99">Eletrotécnica</option>
-					<option value="14">Enfermagem</option>
-					<option value="31">Reciclagem de Enfermagem</option>
-					<!--	<option value="19">Estética</option>-->
-					<option value="19">Farmácia</option>
-					<option value="23">Informática</option>
-					<option value="22">Logística</option>
-					<!--	<option value="19">Petróleo e Gás</option>-->
-					<option value="20">Portos</option>
-					<option value="29">Radiologia</option>
-					<option value="20">Segurança do Trabalho</option>
-					<!--	<option value="19">Telecomunicações</option>
-					<option value="17">Turismo</option>
-					<option value="28">(EJA) - Ensino Médio</option>-->
-					
-					
-
-				</select>
-
-				
-				<script type="text/javascript">
-					function update(){
-			 		var select = document.getElementById('flex');
-			    var option = select.options[select.selectedIndex];
-
-					var resultado = option.value;
-
-					switch(resultado)
-					{
-						case "22":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 14 parcelas mensais.";
-						    document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "19":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "99":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "20":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-						    document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "14":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 24 parcelas mensais.";
-						    document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "19":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							    document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "23":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "28":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-						case "29":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais)) no ato da matrícula + 24 parcelas mensais.";
-						    document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-
-						case "17":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais)) no ato da matrícula + 14 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-						case "30":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 21 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "Responsáveis:";
-							document.getElementById('RespIdRG').value = "- RG";
-							document.getElementById('RespIdCPF').value = "- CPF";
-							document.getElementById('RespIDCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Carteirinha de Vacinação";
-							document.getElementById('AlunoIdCR').value = "- Comprovante de residência";
-							document.getElementById('AlunoIdFoto').value = "- 01 Foto 3x4";
-							document.getElementById('AlunoIdHEF').value = "- Histórico do Ens. Fundamental com GDAE";
-							document.getElementById('AlunoIdHEM').value = "- Histórico do Ens. Médio com GDAE";
-						break;
-						case "31":
-							document.getElementById('Teste').value = "- Entrada de R$120,00 (Cento e Vinte Reais) no ato da matrícula + 7 parcelas mensais.";
-							document.getElementById('RespIdTitle').value = "";
-							document.getElementById('RespIdRG').value = "";
-							document.getElementById('RespIdCPF').value = "";
-							document.getElementById('RespIDCR').value = "";
-							document.getElementById('AlunoIdTitle').value = "Aluno:";
-							document.getElementById('AlunoIdRG').value = "- RG";
-							document.getElementById('AlunoIdCPF').value = "- CPF";
-							document.getElementById('AlunoIdCNC').value = "- Certidão de Nascimento ou Casamento";
-							document.getElementById('AlunoIdCV').value = "- Comprovante de Residência";
-							document.getElementById('AlunoIdCR').value = "- Histórico de Enfermagem";
-							document.getElementById('AlunoIdFoto').value = "- Diploma/Certificado de Enfermagem";
-							document.getElementById('AlunoIdHEF').value = "";
-							document.getElementById('AlunoIdHEM').value = "";
-						break;
-					}
-
-				  }				
-				</script>
-
-			<label id ="eixos" class="eixos" for="Eixos">Eixos:</label>
-			<select style="font-family: Roboto" id="eixo" name="eixo" onchange="popular(this.id), limpar(),mostrar(eixo)">
-					<option selected="selected">Selecione...</option>
-					<option value="5">Educação Profissional</option>
-				
-				</select>
-    				<label style="font-family: Roboto" id="Cursos2" class="Cursos2" for="Cursos2" style="display: none">Modalidade:</label>
-					<select style="font-family: Roboto" id="curso" name="curso" onchange="atribuirValores(),limpar()" >
-					
-				
-			</select>
-						
-			<button id="voltar" type="button" onclick="voltar(),limpar()" style=" width: 80px; height: 29px; font-size: 17px; float:inherit; margin-left: 5px;">Voltar</button>
-		</div>
-			<form class="form-horizontal">
-			<fieldset>
-
-				
-
-			<!-- Text input-->
-			<div class="form-group1">
-			  <label style="font-family: Roboto" class="col-md-4 control-label" for="Mensalidade">Mensalidade Integral:</label>  
-			  <div class="col-md-4">
-			  <input style="font-family: Roboto" style="display: inline-block; "type="text" id="valor1" value="" name="valor1" readonly="true" class="form-control input-md">
-			  </div>
-
-			</div>
-
-			<!-- Text input-->
-			<div class="form-group2">
-			
-			  <label style="font-family: Roboto" class="col-md-4 control-label" for="Porcentagem">Porcentagem do Desconto</label>  
-			  <div class="col-md-4">
-			  <input style="font-family: Roboto" type="text" id="desconto1"  name="desconto1" value="65.98"  placeholder="%" class="form-control input-md">
-			  <button type="button" onclick="calcValor()" style=" width: 80px; height: 29px; font-size: 17px; float:inherit; font-family: Roboto;">Calcular</button>
-			</div>
-			</div>
-
-			<!-- Text input-->
-			<div class="form-group3">
-			  <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia 1º">Até o Dia 1º</label>  
-			  <div class="col-md-4">
-			  <input style="font-family: Roboto" type="text" id="total1" name="total1" readonly="true"  class="form-control input-md">
-			
-			  </div>
-			</div>
-
-			<!-- Text input-->
-			<div class="form-group4">
-			  <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia 7">Até o Dia 7</label>  
-			  <div class="col-md-4">
-			  <input style="font-family: Roboto" type="text" id="total2" name="total2" readonly="true"  class="form-control input-md">
-			  </div>
-			</div>
-
-			
-			<!-- Text input-->
-			<div class="form-group5">
-			  <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia 25">Até o Dia 25</label>  
-			  <div class="col-md-4">
-			  <input style="font-family: Roboto" type="text" id="total6" name="total6" readonly="true"  class="form-control input-md">
-			  </div>
-			</div>
-			</fieldset>
-			</form>
-    <br>
-
-            <!-- Text input Material Didatico Incluso-->
-			<div style="font-family: Roboto;">
-				<input style="font-family: Roboto; font-weight: normal; font-size: 18px;line-height:1.5; width: 100%; border: 0px; box-shadow: none" id="Teste" disabled></input>
-				<ul style="font-family: Roboto; font-size: 18px;line-height:1.5" id="">- Material didático incluso.</ul>
-            </div>
-  
+        <div class="container" style="margin-left: 30px;">
             <br>
-			   
-			</script>
-			
-			
-                <h3 style="font-weight:bold; font-size: 19px; font-family: Roboto; text-align: justify; width: 780px;" class="">Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo: </h3><br>
-	            
-	            
-	            <div class="">
-	                <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 1º R$552,00</h1>
-                    <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 7º R$565,80</h1>
-                    <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 25º R$621,00</h1>
-	            </div>
-	           <br>
-				<h2 style="font-weight: bold; font-size: 22px; font-family: Roboto; text-align: justify;">Documentos necessários para matrícula (cópia e original):</h2>
-			
-			<div style="font-family: Roboto"; class="docAluno">
-				<input style="font-family: Roboto; font-weight: bold; font-size: 17px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdTitle" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdRG" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdCPF" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdCNC" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdCV" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdCR" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdFoto" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdHEF" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="AlunoIdHEM" disabled></input>
-			    
-			    <input style="font-family: Roboto; font-weight: bold; font-size: 17px; width: 100%; border: 0px; box-shadow: none" id="" disabled></input>
-			    <input style="font-family: Roboto; font-weight: bold; font-size: 17px; width: 100%; border: 0px; box-shadow: none" id="RespIdTitle" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="RespIdRG" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="RespIdCPF" disabled></input>
-			    <input style="font-family: Roboto; font-weight: normal; font-size: 16px; width: 100%; border: 0px; box-shadow: none" id="RespIDCR" disabled></input>
-			</div>
-			
-			<div style="align-items: center; text-align: center; float:right; margin-right: 100px;" class="assinatura">
-				_____________________________<br><br>
-						   Assinatura do Colaborador(a)
-			</div>
-			
-			
-			
-			<div class="horaAula">
-				<ul id="horaAula" style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 17px; margin-bottom: 8px;">Horário de Aula (manhã): 07h00 às 11h00 </ul>
-				<ul id="horaAula" style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 17px;">Horário de Aula (noite): 18h05 às 22h15 </ul>
-			</div>
-            
-		
-    	</div>
-		</main>
-		
-	            <footer class="rodape-pagina">
-        			<img border="0" src="../../../../Styles/img/Rodape.png" >
-        		</footer>
 
-	</body>
+            <div class="cursos" style="display: flex;">
+                <label style="font-family: Roboto" id="Cursos2" class="Cursos2" for="Cursos2">Curso:</label>
+                <select style="font-family: Roboto" id="curso" name="curso" onchange="updateCourseInfo()">
+                </select>
+            </div>
+
+            <form class="form-horizontal">
+                <fieldset>
+                    <!-- Text input-->
+                    <div class="form-group1">
+                        <label style="font-family: Roboto" class="col-md-4 control-label" for="Mensalidade">Mensalidade Integral:</label>
+                        <div class="col-md-4">
+                            <input style="font-family: Roboto" type="text" id="valor1" name="valor1" readonly="true" class="form-control input-md">
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group2">
+                        <label style="font-family: Roboto" class="col-md-4 control-label" for="Porcentagem">Porcentagem do Desconto</label>
+                        <div class="col-md-4">
+                            <input style="font-family: Roboto" type="text" id="desconto1" name="desconto1" placeholder="%" class="form-control input-md">
+                            <button type="button" onclick="calculateValues()" style=" width: 80px; height: 29px; font-size: 17px; float:inherit; font-family: Roboto;">Calcular</button>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group3">
+                        <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia1">Até o Dia 1º</label>
+                        <div class="col-md-4">
+                            <input style="font-family: Roboto" type="text" id="total1" name="total1" readonly="true" class="form-control input-md">
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group4">
+                        <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia7">Até o Dia 7</label>
+                        <div class="col-md-4">
+                            <input style="font-family: Roboto" type="text" id="total2" name="total2" readonly="true" class="form-control input-md">
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group5">
+                        <label style="font-family: Roboto" class="col-md-4 control-label" for="Dia25">Até o Dia 25</label>
+                        <div class="col-md-4">
+                            <input style="font-family: Roboto" type="text" id="total6" name="total6" readonly="true" class="form-control input-md">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <br>
+
+            <!-- Payment Info -->
+            <div style="font-family: Roboto;">
+                <input style="font-family: Roboto; font-weight: normal; font-size: 18px; line-height:1.5; width: 100%; border: 0px; box-shadow: none" id="Teste" disabled>
+                </input>
+                <ul style="font-family: Roboto; font-size: 18px; line-height:1.5" id="">- Material didático incluso.</ul>
+            </div>
+
+            <br>
+
+            <h3 style="font-weight:bold; font-size: 19px; font-family: Roboto; text-align: justify; width: 780px;" class="">Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo: </h3><br>
+
+            <div class="">
+                <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 1º R$552,00</h1>
+                <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 7º R$565,80</h1>
+                <h1 style="font-family: Roboto;font-weight: regular ;font-size: 18px; line-height:1.5" id="">•  Até o dia 25º R$621,00</h1>
+            </div>
+            <br>
+
+            <h2 style="font-weight: bold; font-size: 22px; font-family: Roboto; text-align: justify;">Documentos necessários para matrícula (cópia e original):</h2>
+
+            <div style="font-family: Roboto;" class="docAluno">
+                <p style="font-weight: bold; font-size: 17px;">Aluno:</p>
+                <p style="font-size: 16px;">- RG</p>
+                <p style="font-size: 16px;">- CPF</p>
+                <p style="font-size: 16px;">- Certidão de Nascimento ou Casamento</p>
+                <p style="font-size: 16px;">- Carteirinha de Vacinação</p>
+                <p style="font-size: 16px;">- Comprovante de residência</p>
+                <p style="font-size: 16px;">- 01 Foto 3x4</p>
+                <p style="font-size: 16px;">- Histórico do Ens. Fundamental com GDAE</p>
+                <p style="font-size: 16px;">- Histórico do Ens. Médio com GDAE</p>
+
+                <br>
+
+                <p style="font-weight: bold; font-size: 17px;">Responsáveis:</p>
+                <p style="font-size: 16px;">- RG</p>
+                <p style="font-size: 16px;">- CPF</p>
+                <p style="font-size: 16px;">- Comprovante de residência</p>
+            </div>
+
+            <div style="align-items: center; text-align: center; float:right; margin-right: 100px;" class="assinatura">
+                _____________________________<br><br>
+                Assinatura do Colaborador(a)
+            </div>
+						<footer class="rodape-pagina">
+							<img border="0" src="../../../../Styles/img/Rodape.png">
+					</footer>
+        </div>
+    </main>
+
+		<!--_________________________________________PÁGINA 2___________________________________________-->
+		<main class="break">
+			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">VANTAGENS 2025 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ </p> <b id="date"></b></h1>
+			<div class="container">
+			<div style="font-family: Roboto; line-height:1.5" class="Vantagens">
+				<div class="vtgEixo">
+				<ul style="font-family: Roboto; font-weight: bold" id="vtgEixo"></ul>
+				</div>
+
+			  <div class="horaAula">
+					<ul id="horaAula" style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 17px; margin-bottom: 8px;">Horário de Aula (manhã): 07h00 às 11h00 </ul>
+					<ul id="horaAula" style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 17px;">Horário de Aula (noite): 18h05 às 22h15 </ul>
+			</div>
+			<br>
+			<br>
+			<br>
+
+				<div class="vtg01">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg01">1 — Cursos de duração de 12 a 18 meses, com Matriz curricular atualizada, com as necessidades do mercado, e autorizada pelo MEC, com diploma válido em todo o território nacional;</ul>
+				</div>
+
+				<div class="vtg02">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg02">2 — Nossos professores são altamente capacitamos para o aprendizado dos alunos, com especializações que fazem toda a diferença no desenvolvimento curricular;</ul>
+				</div>
+
+				<div class="vtg03">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg03">3 — O material de estudo é totalmente voltado para a Educação Profissional e para as necessidades do mercado de trabalho, que é apresentado aos alunos em apostilas, dentro de plataformas on-line ou livros;</ul>
+				</div>
+
+				<div class="vtg04">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg04">4 — Salas amplas próprias ao ambiente escolar e um sistema de avaliação aprimorado e moderno;</ul>
+				</div>
+
+				<div class="vtg05">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg05">5 — Todos os cursos são acompanhados muito de perto por seus coordenadores e diretores, tendo os alunos dia certos na semana e horário para conversarem com eles;</ul>
+				</div>
+
+				<div class="vtg06">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg06">6 — O estágio só é obrigatório para a certificação nos cursos de ENFERMAGEM 600 horas e RADIOLOGIA 400 horas. Nesses casos, os estágios são supervisionados por profissionais com graduação na área. A escola tem parcerias com hospitais, clínicas, UPAs, PAM e empresas;</ul>
+				</div>
+
+				<div class="vtg07">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg07">7 — Quanto aos estágios não obrigatórios, a escola incentiva e promove parcerias que ajudam os alunos interessados em realizar estágio, que também são atestados e certificados junto com a empresa conveniada;</ul>
+				</div>
+
+				<div class="vtg08">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg08">8 — Os alunos podem visualizar on-line, ocorrências, boletins e até mesmo a ficha financeira através do terminal WEB;</ul>
+				</div>
+
+				<div class="vtg09">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg09">9 — Para aumentar as experiências dos alunos, nossa escola promove eventos pedagógicos, debates e visitas técnicas, que levam os alunos para os ambientes de trabalho reais, que enfrentarão depois de formados;</ul>
+				</div>
+
+				<div class="vtg10">
+				<ul style="font-family: Roboto; font-size: 16px;" id="vtg10">10 - Nossos laboratórios são equipados com materiais de última geração, e os alunos são constantemente colocados em situações práticas que facilitam o aprendizado e o projeto pedagógico.</ul>
+				</div>
+			</div>
+
+    <footer class="rodape-pagina">
+        <img border="0" src="../../../../Styles/img/Rodape.png">
+    </footer>
+
+</body>
 </html>
-
