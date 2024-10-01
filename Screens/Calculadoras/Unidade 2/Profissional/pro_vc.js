@@ -1,4 +1,4 @@
-var descontTecn75 = 56.52;
+var descontTecn75 = 28;
 var descontTecn77 = 77.80;
 var descontTecn72 = 28.00;
 var descontTecn76 = 44.00;
@@ -15,7 +15,7 @@ var cursos = [{
     cod: 22,
     curso:"Administração",
     categoria: 0,
-    valorIntegral: 552.00,
+    valorIntegral: 615.00,
     docAluno:"Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
     docResp:"Responsáveis: |- RG|- CPF|- Comprovante de residência",
     valorApostila: Parcela18meses,
@@ -41,7 +41,7 @@ var cursos = [{
     cod: 25,
     curso:"Enfermagem",
     categoria: 0,
-    valorIntegral: 552.00,
+    valorIntegral: 615.00,
     docAluno:"Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Histórico do Ens. Fundamental com GDAE |- Histórico do Ens. Médio com GDAE",
     docResp: "Responsáveis: |- RG|- CPF|- Comprovante de residência",
     valorApostila: Parcela18meses,
