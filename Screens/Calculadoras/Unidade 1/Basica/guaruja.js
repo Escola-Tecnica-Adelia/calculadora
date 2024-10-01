@@ -6,6 +6,8 @@ var descontFund1s345 = 59.722;
 var descontFund2 = 64.0346;
 var descontMedioMat = 66.4375;
 var descontMedioVes = 68.68;
+var AntecipacaoRecreacao =
+  "Antecipação da Anuidade: R$ 300,00 Pode ser dividido em até 4x de R$75,00 no Cartão de Crédito.";
 var ApostilaInfantil =
   "Apostilas: R$ 1.218,00 Esse valor pode ser dividido em até 12x de R$ 101,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 552,00 Pode ser dividido em até 4x de R$138,00 no Cartão de Crédito.";
 var ApostilaFund1 =
@@ -38,7 +40,7 @@ var cursos = [
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: "",
+    valorApostila: AntecipacaoRecreacao,
     idadeMatricula: IdadeRecreacaoInfantil,
     TextoSegundaMensalidade: "",
     SegundaMensalidade: "",
@@ -80,7 +82,7 @@ var cursos = [
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: "",
+    valorApostila: AntecipacaoRecreacao,
     idadeMatricula: IdadeRecreacaoInfantilVespertino,
     TextoSegundaMensalidade: "",
     SegundaMensalidade: "",

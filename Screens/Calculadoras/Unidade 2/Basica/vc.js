@@ -1,54 +1,47 @@
-var descontInfantil = 51.4;
-var recreInfantilmat = 29.71;
-var recreInfantilvesp = 21.68;
-var descontFund1s1 = 60.97;
-var descontFund1s1ro = 69.24;
-var descontFund1s2 = 65.96;
-var descontFund1s345 = 55.06;
-var descontFund1s345n = 55.06;
-var descontFund2 = 59.74;
-var descontFund2n = 59.74;
-var descontMedioMat = 62.43;
-var descontMedioMatn = 62.43;
-var descontMedioVes = 62.43;
-var descontTecn75 = 50.0;
-var descontTecn77 = 77.8;
-var descontTecn72 = 20.0;
-var descontTecn76 = 37.0;
-var descontTecn78 = 90.769;
-var descontTecn71 = 0.0;
-var horarioMatutino =  "Horário das Aulas | Manhã: 07h às 11h 50min.";
-var horarioMatutinoEm = "Horário das Aulas | Manhã: 07h às 12h 20min.";
-var horarioMatutinoeVespertino = "Horário das Aulas | Manhã: 07h às 11h 50min. | Tarde: 12h e 40min às 17h e 30min.";
-var horarioVespertinofund1 = "Horário das Aulas | Tarde: 12h e 40min às 17h e 30min.";
-  
-
-
+var descontInfantil = 54.113;
+var recreInfantilmat = 28.463;
+var recreInfantilvesp = 22.009;
+var descontFund1s12 = 66.313;
+var descontFund1s345 = 59.722;
+var descontFund2 = 64.0346;
+var descontMedioMat = 66.4375;
+var descontMedioVes = 68.68;
+var AntecipacaoRecreacao =
+  "Antecipação da Anuidade: R$ 300,00 Pode ser dividido em até 4x de R$75,00 no Cartão de Crédito.";
 var ApostilaInfantil =
-  "Apostilas: R$ 1.067,96 Esse valor pode ser dividido em até 12x de R$ 89,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 450,00 Pode ser dividido em até 4x de R$112,50 no Cartão de Crédito.";
+  "Apostilas: R$ 1.218,00 Esse valor pode ser dividido em até 12x de R$ 101,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
 var ApostilaFund1 =
-  "Apostilas:  R$ 1.973,35 Esse valor pode ser dividido em até 12x de R$ 164,44 no Cartão de Crédito. | Antecipação da Anuidade: R$ 450,00 Pode ser dividido em até 4x de R$112,50 no Cartão de Crédito.";
+  "Apostilas:  R$ 2.244,00 Esse valor pode ser dividido em até 12x de R$ 187,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
 var ApostilaFund2 =
-  "Apostilas:  R$ 2.301,74 Esse valor pode ser dividido em até 12x de R$ 191,81 no Cartão de Crédito. | Antecipação da Anuidade: R$ 450,00 Pode ser dividido em até 4x de R$112,50 no Cartão de Crédito.";
+  "Apostilas:  R$ 2.613,00 Esse valor pode ser dividido em até 12x de R$ 217,75 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
 var ApostilaMed1e2 =
-  "Apostilas: R$ 2.533,10 Esse valor pode ser dividido em até 12x de R$ 211,09 no Cartão de Crédito. | Antecipação da Anuidade: R$ 450,00 pode ser dividido em até 4x de R$112,50 no Cartão de Crédito.";
+  "Apostilas: R$ 2.874,00 Esse valor pode ser dividido em até 12x de R$ 239,50 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
 var ApostilaMed3 =
-  "Apostilas: R$ 2.800,00 Esse valor pode ser dividido em até 12x de R$ 233,34 no Cartão de Crédito. | Antecipação da Anuidade: R$ 450,00 pode ser dividido em até 4x de R$112,50 no Cartão de Crédito.";
+  "Apostilas: R$ 3.180,00 Esse valor pode ser dividido em até 12x de R$ 265,00 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
+var ApostilaMed1vesp =
+  "Apostilas: R$ 2.743,50 Esse valor pode ser dividido em até 12x de R$ 228,63 no Cartão de Crédito. | Antecipação da Anuidade: R$ 507,00 Pode ser dividido em até 4x de R$126,75 no Cartão de Crédito.";
+var SegundaMensalidadeEducacaoInfantil = "- Até o dia 1º R$ 601,48 | - Até o dia 7º R$ 631,56| - Até o dia 25º R$ 751,86";
+var SegundaMensalidadeFundamental1 = "- Até o dia 1º R$ 819,31 | - Até o dia 7º R$ 860,28| - Até o dia 25º R$ 1024,14";
+var SegundaMensalidadeFundamental2 = "- Até o dia 1º R$ 1017,64 | - Até o dia 7º R$ 1068,53| - Até o dia 25º R$ 1272,05";
+var SegundaMensalidadeEnsinoMedio = "- Até o dia 1º R$ 1197,27 | - Até o dia 7º R$ 1257,13| - Até o dia 25º R$ 1496,59";
 var ApostilaMed4 = "";
-var IdadeRecreacaoInfantil =
-  "Idade para matrícula: | Recreação Infantil II - 3 anos, até 31 de março do ano letivo. | Recreação Infantil III - 4 anos, até 31 de março do ano letivo. | Recreação Infantil IV - 5 anos, até 31 de março do ano letivo.";
+var IdadeRecreacaoInfantil = "";
+var IdadeRecreacaoInfantilVespertino = "";
+var IdadeEducacaoInfantil =
+    "Idade para matrícula: | Educação Infantil I - 2 anos, até 31 de março do ano letivo.. | Educação Infantil II - 3 anos, até 31 de março do ano letivo. | Educação Infantil III - 4 anos, até 31 de março do ano letivo. | Educação Infantil IV - 5 anos, até 31 de março do ano letivo.";
 var cursos = [
+  //Recreação Infantil Vespertino
   {
-    cod: 955,
+    cod: 988,
     curso: "Recreação Infantil Vespertino",
     categoria: 6,
-    valorIntegral: 498.0,
+    valorIntegral: 557.76,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: "",
-    idadeMatricula: IdadeRecreacaoInfantil,
+    valorApostila: AntecipacaoRecreacao,
+    idadeMatricula: IdadeRecreacaoInfantilVespertino,
     TextoSegundaMensalidade: "",
     SegundaMensalidade: "",
     horaAula: "",
@@ -79,55 +72,12 @@ var cursos = [
     vtg10:
       "10 - O uso do uniforme é obrigatório para que não se tenha comparações entre as crianças.",
   },
-  {
-    cod: 6,
-    curso: "Infantil IV - Vespertino",
-    categoria: 1,
-    valorIntegral: 1074.08,
-    docAluno:
-      "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
-    docResp:
-      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaInfantil,
-    idadeMatricula:
-      "Idade para Matrícula: |Infantil IV - 5 anos, até 31 de março do ano letivo.",
-    TextoSegundaMensalidade:
-      "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 537,04 | - Até o dia 7º R$ 563,92| - Até o dia 25º R$ 671,30",
-    horaAula: "",
-    desconto: descontInfantil,
-
-    vtgEixo: "EDUCAÇÃO INFANTIL",
-    vtgLetivo: "",
-    vtgHorario: "Horário das Aulas | Tarde: 12h e 40min às 16h e 40min.",
-    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
-    vtg01:
-      "1 - Conta com o Sistema Anglo de Ensino, somando o lúdico ao aprendizado pedagógico;",
-    vtg02:
-      "2 — A pré-alfabetização trabalha com a ludicidade e o desenvolvimento de habilidades psicomotoras e socioemocionais;",
-    vtg03:
-      "3 — O processo de ensino-aprendizagem é realizado por profissionais capacitados e conta com o apoio de auxiliares;",
-    vtg04:
-      "4 — A estrutura física é adaptada para o desenvolvimento do ensino-aprendizagem do educando com materiais próprios para o desenvolvimento da psicomotricidade (coordenação motora grossa e fina), contando com atividades de música, informática, culinária e atividade física e recreação na piscina, com monitoramente de inspetoria e cameras;",
-    vtg05:
-      "5 — Os banheiros são exclusivos para a utilização dos alunos desse ciclo, que são sempre acompanhados por um responsável;",
-    vtg06:
-      "6 - Horário de lanche separado dos demais ciclos com a participação dos professores e auxiliares, aproveitando desse momento para desenvolver habilidades como limpeza, organização e convivência social;",
-    vtg07:
-      "7 — A visão de valores familiares proporciona um ambiente sadio além do aprendizado;",
-    vtg08:
-      "8 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-    vtg09:
-      "9 — O uso do uniforme é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-    vtg10:
-      "10 — O boletim (relatório bimestral) dos alunos da Educação Infantil, informa aos responsáveis o desenvolvimento psicopedagógico.",
-  },
+  //1° Ano do Ensino Fundamental I
   {
     cod: 7,
     curso: "1° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
     docResp:
@@ -137,14 +87,14 @@ var cursos = [
       "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
-    desconto: descontFund1s1,
+    desconto: descontFund1s12,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12H e 40min às 17h e 30min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
@@ -167,56 +117,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
-  {
-    cod: 789,
-    curso: "1° Ano do Ensino Fundamental I Casa",
-    categoria: 2,
-    valorIntegral: 1463.06,
-    docAluno:
-      "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
-    docResp:
-      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaFund1,
-    idadeMatricula:
-      "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
-    TextoSegundaMensalidade:
-      "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
-    horaAula: "",
-    desconto: descontFund1s1ro,
-
-    vtgEixo: "ENSINO FUNDAMENTAL I ",
-    vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
-    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
-    vtg01:
-      "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
-    vtg02:
-      "2 — Disciplinas além do currículo normal a saber Formação Socioemocional, Inglês, e Laboratório de Informática; Para ministrar essas disciplinas o aluno passa mais tempo na escola, portanto a carga horária é maior que nas outras escolas;",
-    vtg03:
-      "3 - Salas amplas próprias ao ambiente escolar, corredores monitorados pelos inspetores e cameras, horário de lanche escalonado sempre monitorado pela professora e auxiliar;",
-    vtg04:
-      "4 — Todos os professores de 1º ao 5º ano trabalham com auxiliares que dão suporte no aprendizado e na disciplina dos alunos;",
-    vtg05:
-      "5 – O LÍDER EM MIM: Programa de alto desempenho socioemocional, baseados em hábitos e valores. Com intuito de desenvolver nos alunos habilidades e competências diferenciadas como: responsabilidade, organização, priorização, proatividade, comunicação e etc. Somadas ao processo de ensino – aprendizagem;",
-    vtg06:
-      "6 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
-    vtg07:
-      "7 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
-    vtg08:
-      "8 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-    vtg09:
-      "9 — O uso do uniforme é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-    vtg10:
-      "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
-  },
-
+  //2° Ano do Ensino Fundamental I
   {
     cod: 8,
     curso: "2° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação ",
     docResp:
@@ -226,14 +132,14 @@ var cursos = [
       "Idade para Matrícula: |2º Ano - 7 anos, até 31 de março do ano letivo e ter concluído o primeiro ano do Ensino Fundamental.",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
-    desconto: descontFund1s2,
+    desconto: descontFund1s12,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12h e 40min às 17h e 30min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
@@ -256,11 +162,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //3° Ano do Ensino Fundamental I
   {
     cod: 9,
     curso: "3° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -269,14 +176,14 @@ var cursos = [
     idadeMatricula: "",
     TextoSegundaMensalidade:
       "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12h e 40min às 17h e 30min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
@@ -299,11 +206,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //4° Ano do Ensino Fundamental I
   {
     cod: 10,
     curso: "4° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -319,7 +227,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12h e 40min às 17h e 30min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
@@ -342,11 +251,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //5° Ano do Ensino Fundamental I
   {
     cod: 11,
     curso: "5° Ano do Ensino Fundamental I",
     categoria: 2,
-    valorIntegral: 1463.06,
+    valorIntegral: 1638.63,
     docAluno:
       "Aluno: |- RG |- CPF|- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3x4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -362,7 +272,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
-    vtgHorario: horarioVespertinofund1,
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12h e 40min às 17h e 30min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
@@ -385,11 +296,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
+  //6° Ano do Ensino Fundamental II
   {
     cod: 12,
     curso: "6° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -405,7 +317,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL II",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 12h 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos quatro anos do curso;",
@@ -428,11 +341,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //7° Ano do Ensino Fundamental II
   {
     cod: 13,
     curso: "7° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -448,7 +362,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL II",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 12h 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos quatro anos do curso;",
@@ -471,11 +386,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //8° Ano do Ensino Fundamental II
   {
     cod: 14,
     curso: "8° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -491,7 +407,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL II",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 12h 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos quatro anos do curso;",
@@ -514,11 +431,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //9° Ano do Ensino Fundamental II
   {
     cod: 15,
     curso: "9° Ano do Ensino Fundamental II",
     categoria: 3,
-    valorIntegral: 1817.22,
+    valorIntegral: 2035.29,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento |- Comprovante de residência |- 01 Foto 3X4 |- Declaração de Transferência |- Histórico de Transferência |- Carteirinha de Vacinação |- Declaração de Escolaridade",
     docResp:
@@ -534,7 +452,8 @@ var cursos = [
 
     vtgEixo: "ENSINO FUNDAMENTAL II",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 12h 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos quatro anos do curso;",
@@ -557,11 +476,12 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas em períodos contrário a matrícula realizada.",
   },
+  //1° Ensino Médio - Matutino
   {
     cod: 16,
     curso: "1° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -569,14 +489,16 @@ var cursos = [
     valorApostila: ApostilaMed1e2,
     idadeMatricula: "",
     TextoSegundaMensalidade:
-      "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso.",
-    SegundaMensalidade: "",
+      "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
+    SegundaMensalidade:
+      "- Até o dia 1º R$ 1.069,00 | - Até o dia 7º R$ 1.122,44 | - Até o dia 25º R$ 1.336,24",
     horaAula: "",
     desconto: descontMedioMat,
 
     vtgEixo: "ENSINO MÉDIO",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 12h e 20min",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
@@ -598,11 +520,12 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
+  //2° Ensino Médio - Matutino
   {
     cod: 17,
     curso: "2° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -618,7 +541,8 @@ var cursos = [
 
     vtgEixo: "ENSINO MÉDIO",
     vtgLetivo: "",
-    vtgHorario: horarioMatutinoEm,
+    vtgHorario:
+      " Horário das Aulas | Manhã: 07h às 12h e 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
@@ -640,11 +564,12 @@ var cursos = [
     vtg10:
       "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
+  //3° Ensino Médio - Matutino
   {
     cod: 18,
     curso: "3° Ensino Médio - Matutino",
     categoria: 4,
-    valorIntegral: 2137.98,
+    valorIntegral: 2395.54,
     docAluno:
       "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
@@ -660,7 +585,8 @@ var cursos = [
 
     vtgEixo: "ENSINO MÉDIO",
     vtgLetivo: "",
-    vtgHorario: 'Horário das Aulas | Manhã: 07h às 13h 10min.',
+    vtgHorario:
+      "Horário das Aulas | Manhã: 07h às 13h 20min.",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
     vtg01:
       "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
