@@ -202,51 +202,6 @@ var cursos = [
     vtg10:
       "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
   },
-  //1° Ano do Ensino Fundamental I Casa
-  {
-    cod: 789,
-    curso: "1° Ano do Ensino Fundamental I Casa",
-    categoria: 2,
-    valorIntegral: 1638.63,
-    docAluno:
-      "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
-    docResp:
-      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaFund1,
-    idadeMatricula:
-      "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
-    TextoSegundaMensalidade:
-      "Este documento e seus valores são válidos por 3 (três) dias úteis contando da data que foi impresso, caso ultrapasse este prazo a proposta perderá vigência e os valores praticados pela escola seguirão no modelo abaixo:",
-    SegundaMensalidade: SegundaMensalidadeFundamental1,
-    horaAula: "",
-    desconto: descontFund1s12,
-
-    vtgEixo: "ENSINO FUNDAMENTAL I ",
-    vtgLetivo: "",
-    vtgHorario:
-      "Horário das Aulas | Manhã: 07h às 11h 50min. | Tarde: 12h e 40min às 17h e 30min.",
-    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
-    vtg01:
-      "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos cinco anos do curso;",
-    vtg02:
-      "2 — Disciplinas além do currículo normal a saber Formação Socioemocional, Inglês, e Laboratório de Informática; Para ministrar essas disciplinas o aluno passa mais tempo na escola, portanto a carga horária é maior que nas outras escolas;",
-    vtg03:
-      "3 - Salas amplas próprias ao ambiente escolar, corredores monitorados pelos inspetores e cameras, horário de lanche escalonado sempre monitorado pela professora e auxiliar;",
-    vtg04:
-      "4 — Todos os professores de 1º ao 5º ano trabalham com auxiliares que dão suporte no aprendizado e na disciplina dos alunos;",
-    vtg05:
-      "5 – O LÍDER EM MIM: Programa de alto desempenho socioemocional, baseados em hábitos e valores. Com intuito de desenvolver nos alunos habilidades e competências diferenciadas como: responsabilidade, organização, priorização, proatividade, comunicação e etc. Somadas ao processo de ensino – aprendizagem;",
-    vtg06:
-      "6 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
-    vtg07:
-      "7 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
-    vtg08:
-      "8 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-    vtg09:
-      "9 — O uso do uniforme é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-    vtg10:
-      "10 — As aulas de Educação Física, são realizadas dentro do próprio período de aula",
-  },
   //2° Ano do Ensino Fundamental I
   {
     cod: 8,
