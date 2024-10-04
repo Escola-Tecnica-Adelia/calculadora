@@ -51,26 +51,27 @@ var cursos = [
     vtgLetivo: "",
     vtgHorario: "Horário das Aulas | Tarde: 12h às 18h",
     vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia:",
+    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia:",
     vtg01:
-      "1 - A Recreação Infantil contribui para integrar a criança ao meio social, desenvolver habilidades motoras, e estimular a curiosidade, autonomia, entre outras coisas;",
+      "1 - Recreação Infantil: Nossa recreação infantil ajuda a integrar as crianças ao meio social, desenvolver habilidades motoras e estimular a curiosidade e autonomia de forma divertida e segura.",
     vtg02:
-      "2 - A aprendizagem é realizada através da ludicidade e do desenvolvimento de habilidades e competências;",
+      "2 - Aprendizagem Lúdica: O aprendizado acontece por meio de brincadeiras e atividades que desenvolvem competências e habilidades essenciais, tornando o processo educativo mais leve e agradável.",
     vtg03:
-      "3 - O processo lúdico é realizado por profissionais capacitados e conta com o apoio de auxiliares;",
+      "3 - Equipe Qualificada: O ambiente lúdico é conduzido por profissionais capacitados, com o apoio de auxiliares, garantindo a atenção necessária em cada atividade.",
     vtg04:
-      "4 - A estrutura física é adaptada para o desenvolvimento das atividades recreativas do educando com materiais próprios para o desenvolvimento da psicomotricidade (coordenação motora grossa e fina), monitorado por cameras e inspetoria;",
+      "4 - Estrutura Adaptada: Contamos com uma estrutura física preparada para as atividades recreativas, com materiais adequados para desenvolver a coordenação motora grossa e fina das crianças. Toda a área é monitorada por câmeras e supervisionada por inspetores, oferecendo total segurança.",
     vtg05:
-      "5 - Atividades como: hora da música, do conto, da arte, da culinária, do montar e do relaxar, piscina e parquinho contribuem significativamente para a socialização das crianças;",
+      "5 - Atividades Diversificadas: Momentos como a hora da música, conto, arte, culinária, além de atividades na piscina e parquinho, são essenciais para promover a socialização e o bem-estar dos alunos.",
     vtg06:
-      "6 - Banheiros exclusivos e adaptados para a utilização dos alunos desse ciclo, que são sempre acompanhados por um responsável;",
+      "6 - Banheiros Adaptados: Disponibilizamos banheiros exclusivos e adaptados para as crianças, sempre com a supervisão de um responsável, garantindo conforto e segurança.",
     vtg07:
-      "7 - Horário de lanche separado dos demais ciclos com a participação dos professores e auxiliares, aproveitando desse momento para desenvolver habilidades como limpeza, organização e convivência social;",
+      "7 - Hora do Lanche: Temos um horário de lanche exclusivo para este ciclo, acompanhado pelos professores e auxiliares, onde aproveitamos o momento para desenvolver habilidades de organização, limpeza e convivência.",
     vtg08:
-      "8 - A visão de valores familiares proporciona um ambiente sadio além do aprendizado;",
+      "8 - Valores Familiares: Valorizamos os princípios familiares, proporcionando um ambiente saudável e acolhedor, além de um aprendizado de qualidade.",
     vtg09:
-      "9 - A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber sobre o desenvolvimento (psicomotor, social e outros) do aluno com hora marcada previamente;",
+      "9 - Acompanhamento Personalizado: Nossa equipe pedagógica está sempre presente, e os pais podem acompanhar de perto o desenvolvimento psicomotor, social e acadêmico do seu filho, com encontros previamente agendados.",
     vtg10:
-      "10 - O uso do uniforme é obrigatório para que não se tenha comparações entre as crianças.",
+      "10 - Uniforme Obrigatório: O uso do uniforme é obrigatório para promover igualdade entre as crianças, evitando comparações e incentivando a unidade.",
   },
   //1° Ano do Ensino Fundamental I
   {
