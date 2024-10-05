@@ -156,7 +156,7 @@ var cursos = [
       "9 — Uniforme Obrigatório: O uso do uniforme é obrigatório, promovendo igualdade entre os alunos e evitando situações de comparação e até mesmo bullying.",
     vtg10:
       "10 — Uniforme Obrigatório: O uso do uniforme é obrigatório, promovendo igualdade entre os alunos e evitando situações de comparação e até mesmo bullying.",
-  },
+  }, 
   //1° Ano do Ensino Fundamental I
   {
     cod: 7,
