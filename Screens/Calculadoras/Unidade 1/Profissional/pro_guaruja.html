@@ -76,6 +76,14 @@
                 horario: "- Horário de Aula (noite): 18h05 às 22h15"
             },
             {
+                cod: 35,
+                curso: "Instrumentação Cirúrgica",
+                valorIntegral: 615,
+                desconto: 27.53,
+                valorApostila: "- Entrada de R$120,00 no ato da matrícula + 12 parcelas mensais.",
+                horario: "- 3 vezes na semana das 20:00h às 22:00h ou aos Sábados das 08:00h às 13:00h"
+            },
+            {
                 cod: 29,
                 curso: "Logística",
                 valorIntegral: 615,
@@ -100,14 +108,6 @@
                 horario: "- Horário de Aula (noite): 18h05 às 22h15"
             },
             {
-                cod: 33,
-                curso: "Segurança do Trabalho",
-                valorIntegral: 615,
-                desconto: 56.52,
-                valorApostila: "- Entrada de R$120,00 no ato da matrícula + 21 parcelas mensais.",
-                horario: "- Horário de Aula (noite): 18h05 às 22h15"
-            },
-            {
                 cod: 34,
                 curso: "Reciclagem de Enfermagem",
                 valorIntegral: 615,
@@ -116,18 +116,24 @@
                 horario: "- Horário de Aula (noite): 18h05 às 22h15"
             },
             {
-                cod: 35,
-                curso: "Instrumentação Cirúrgica",
+                cod: 33,
+                curso: "Segurança do Trabalho",
                 valorIntegral: 615,
-                desconto: 27.53,
-                valorApostila: "- Entrada de R$120,00 no ato da matrícula + 12 parcelas mensais.",
-                horario: "- 3 vezes na semana das 20:00h às 22:00h ou aos Sábados das 08:00h às 13:00h"
-            },
+                desconto: 56.52,
+                valorApostila: "- Entrada de R$120,00 no ato da matrícula + 21 parcelas mensais.",
+                horario: "- Horário de Aula (noite): 18h05 às 22h15"
+            }
         ];
 
         function populateCourseSelect() {
             var cursoSelect = document.getElementById('curso');
             cursoSelect.innerHTML = "<option selected='selected'>Selecione...</option>";
+
+            // Ordena o array 'cursos' em ordem alfabética pelo campo 'curso'
+            cursos.sort(function(a, b) {
+                return a.curso.localeCompare(b.curso);
+            });
+
             for (var i = 0; i < cursos.length; i++) {
                 var option = document.createElement("option");
                 option.text = cursos[i].curso;
