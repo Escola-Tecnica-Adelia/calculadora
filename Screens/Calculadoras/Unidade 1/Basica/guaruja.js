@@ -701,15 +701,15 @@ var cursos = [
     vtgLetivo: "",
     vtgHorario:
       "Horário das Aulas | Manhã: 07h às 12h e 20min. | Tarde: 12h e 40min às 18h.",
-    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
+    vtgVantagens: "Por que escolher o Colégio Adélia para o Ensino Médio Integrado com o Técnico em Administração?",
     vtg01:
-      "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
+      "1 — Professores Qualificados e Foco no ENEM e Mercado de Trabalho: Nossos professores são altamente capacitados para oferecer uma educação completa, que prepara o aluno tanto para o ENEM e os vestibulares quanto para o mercado de trabalho. Durante os três anos, o aluno desenvolve uma formação sólida e direcionada, combinando a base teórica com habilidades práticas da área administrativa.",
     vtg02:
-      "2 — Salas amplas próprias ao ambiente escolar, corredores e horário de lanche sempre monitorados pelos inspetores;",
+      "2 — Infraestrutura Moderna para o Ensino Técnico e Acadêmico: Nossas salas amplas e bem equipadas são ideais para o desenvolvimento acadêmico e técnico dos alunos. Com laboratórios específicos para o curso de Administração e espaços adequados para o ensino teórico, os alunos têm acesso a um ambiente propício para o aprendizado prático e para a preparação ao ENEM.",
     vtg03:
-      "3 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
+      "3 — Sistema Anglo de Ensino e Formação Técnica: Utilizamos o Sistema Anglo, que oferece um currículo robusto para os alunos que buscam aprovação no ENEM e vestibulares. Além disso, o curso técnico integrado em Administração complementa essa formação, preparando os alunos para o mercado de trabalho com conhecimentos práticos de gestão, finanças e empreendedorismo.",
     vtg04:
-      "4 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
+      "4 — Ambiente Familiar e Acolhedor: Ao longo do ano letivo, realizamos diversos eventos que proporcionam um ambiente acolhedor e familiar, promovendo o bem-estar e a integração dos alunos.",
     vtg05:
       "5 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
     vtg06:
