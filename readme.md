@@ -14,3 +14,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 - 1.2.1
 1. Atualização das vantagens das educação básica.
 2. Atualização da logo do colégio adélia.
+
+- 1.3.1
+1. Correção de valores e bugs

@@ -76,48 +76,6 @@ var cursos = [
     vtg10:
       "10 - Uniforme Obrigatório: O uso do uniforme é obrigatório para promover igualdade entre as crianças, evitando comparações e incentivando a unidade.",
   },
-  //Infantil - Vespertino
-  {
-    cod: 6,
-    curso: "Infantil - Vespertino",
-    categoria: 1,
-    valorIntegral: 1202.97,
-    docAluno:
-      "Aluno: |- RG |- CPF|- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação",
-    docResp:
-      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaInfantil,
-    idadeMatricula: IdadeEducacaoInfantil,
-    TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade: SegundaMensalidadeEducacaoInfantil,
-    horaAula: "",
-    desconto: descontInfantil,
-
-    vtgEixo: "EDUCAÇÃO INFANTIL",
-    vtgLetivo: "",
-    vtgHorario: "Horário das Aulas | Tarde: 12h e 40min às 16h e 40min.",
-    vtgVantagens: "Por que matricular seu filho no Colégio Adélia?",
-    vtg01:
-      "1 - Sistema Anglo de Ensino: Oferecemos o renomado Sistema Anglo, que une o lúdico ao aprendizado pedagógico, garantindo uma base sólida para o desenvolvimento educacional.",
-    vtg02:
-      "2 — Pré-alfabetização com Ludicidade: Nosso programa de pré-alfabetização trabalha com atividades lúdicas, desenvolvendo habilidades psicomotoras e socioemocionais essenciais para o crescimento das crianças.",
-    vtg03:
-      "3 — Equipe Capacitada: O processo de ensino-aprendizagem é conduzido por profissionais altamente qualificados, com o apoio de auxiliares, garantindo atenção e cuidado personalizados.",
-    vtg04:
-      "4 — Estrutura Adaptada e Completa: A estrutura física da escola é preparada para o desenvolvimento integral dos alunos, com materiais específicos para a coordenação motora grossa e fina. Oferecemos atividades como música, informática, culinária, recreação física e momentos na piscina, sempre sob a supervisão de inspetores e câmeras de segurança.",
-    vtg05:
-      "5 — Banheiros Exclusivos: As crianças contam com banheiros exclusivos e adaptados, sempre acompanhadas por um responsável, garantindo segurança e conforto.",
-    vtg06:
-      "6 - Hora do Lanche Diferenciada: O horário de lanche é separado dos demais ciclos, e conta com a participação de professores e auxiliares. Esse momento é aproveitado para ensinar habilidades como limpeza, organização e convivência social.",
-    vtg07:
-      "7 — Valores Familiares: O Colégio Adélia valoriza os princípios familiares, proporcionando um ambiente acolhedor, além de um aprendizado de qualidade.",
-    vtg08:
-      "8 — Acompanhamento Pedagógico: A equipe pedagógica está sempre disponível, e os pais podem acompanhar de perto a vida acadêmica dos filhos, com reuniões agendadas previamente.",
-    vtg09:
-      "9 — Uniforme Obrigatório: O uso do uniforme é obrigatório, promovendo igualdade entre os alunos e evitando situações de comparação e até mesmo bullying.",
-    vtg10:
-      "10 — Uniforme Obrigatório: O uso do uniforme é obrigatório, promovendo igualdade entre os alunos e evitando situações de comparação e até mesmo bullying.",
-  }, 
   //1° Ano do Ensino Fundamental I
   {
     cod: 7,
@@ -135,6 +93,50 @@ var cursos = [
     SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s12,
+
+    vtgEixo: "ENSINO FUNDAMENTAL I ",
+    vtgLetivo: "",
+    vtgHorario:
+      "Horário das Aulas | Tarde: 12H e 40min às 17h e 30min.",
+    vtgVantagens: "Por que escolher o Colégio Adélia para o Ensino Fundamental I?",
+    vtg01:
+      "1 — Professores Qualificados: Contamos com professores capacitados para acompanhar e promover o aprendizado dos alunos ao longo dos cinco anos do curso, focando no desenvolvimento curricular completo.",
+    vtg02:
+      "2 — Currículo Ampliado: Além das disciplinas regulares, oferecemos aulas de Formação Socioemocional, Inglês e Laboratório de Informática. Para garantir um ensino mais completo, a carga horária é maior do que a de outras escolas, proporcionando mais tempo para o desenvolvimento integral dos alunos e aprofundamento dos conteúdos.",
+    vtg03:
+      "3 - Infraestrutura Completa: Nossas salas de aula são amplas e projetadas para o ambiente escolar. Os corredores são monitorados por inspetores e câmeras, e o horário de lanche é escalonado, sempre acompanhado pela professora e auxiliares.",
+    vtg04:
+      "4 — Auxílio em Sala: Do 1º ao 5º ano, todos os professores contam com auxiliares, que oferecem suporte no aprendizado e na manutenção da disciplina, assegurando atenção especial a cada aluno.",
+    vtg05:
+      "5 – Programa 'O Líder em Mim': Implementamos o programa de alto desempenho socioemocional 'O Líder em Mim', que desenvolve habilidades como responsabilidade, organização, priorização, proatividade e comunicação, somadas ao processo de ensino-aprendizagem, garantindo que os alunos adquiram competências diferenciadas que vão além do currículo tradicional.",
+    vtg06:
+      "6 — Sistema Anglo de Ensino: O processo de ensino é feito por meio do Sistema Anglo, com o suporte da plataforma digital Plurall, garantindo uma educação de qualidade e acompanhamento contínuo.",
+    vtg07:
+      "7 — Eventos ao Longo do Ano: Realizamos diversos eventos ao longo do ano letivo, proporcionando um ambiente acolhedor e familiar, sempre pensando no bem-estar dos alunos.",
+    vtg08:
+      "8 — Acompanhamento Pedagógico: A equipe pedagógica está sempre disponível, e os pais podem agendar reuniões para acompanhar de perto o desenvolvimento acadêmico dos filhos.",
+    vtg09:
+      "9 — Uniforme Obrigatório: O uso do uniforme é uma medida para promover igualdade entre os alunos, evitando comparações e prevenindo situações de bullying.",
+    vtg10:
+      "10 — Aulas de Educação Física: As aulas de Educação Física são realizadas dentro do horário regular de aulas, garantindo que os alunos se exercitem de forma supervisionada e organizada.",
+  },
+   //1° Ano do Ensino Fundamental I
+   {
+    cod: 60,
+    curso: "1° Ano do Ensino Fundamental I - Casa",
+    categoria: 2,
+    valorIntegral: 1638.63,
+    docAluno:
+      "Aluno: |- RG |- CPF |- Certidão de Nascimento |- 01 Foto 3x4 |- Comprovante de residência |- Carteirinha de vacinação |- Declaração de Transferência",
+    docResp:
+      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
+    valorApostila: ApostilaFund1,
+    idadeMatricula:
+      "Idade para Matrícula: |1º Ano - 6 anos até 31 de março do ano letivo.",
+    TextoSegundaMensalidade: TextoSegundaMensalidade,
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
+    horaAula: "",
+    desconto: 69.06,
 
     vtgEixo: "ENSINO FUNDAMENTAL I ",
     vtgLetivo: "",
@@ -262,8 +264,7 @@ var cursos = [
     valorApostila: ApostilaFund1,
     idadeMatricula: "",
     TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
@@ -307,8 +308,7 @@ var cursos = [
     valorApostila: ApostilaFund1,
     idadeMatricula: "",
     TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
@@ -563,7 +563,7 @@ var cursos = [
     categoria: 4,
     valorIntegral: 2394.54,
     docAluno:
-      "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
+      "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
     valorApostila: ApostilaMed1e2,
@@ -606,7 +606,7 @@ var cursos = [
     categoria: 4,
     valorIntegral: 2394.54,
     docAluno:
-      "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou TransferênciaE |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
+      "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
     docResp:
       "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
     valorApostila: ApostilaMed3,
@@ -641,48 +641,5 @@ var cursos = [
         "9 — Uniforme Obrigatório: O uso do uniforme (camisa da escola) é obrigatório, promovendo igualdade entre os alunos e prevenindo comparações que possam levar ao bullying, favorecendo um ambiente de estudo focado e saudável;",
       vtg10:
         "10 - Aulas de Educação Física: As aulas de Educação Física são realizadas em período contrário ao das aulas regulares, proporcionando um equilíbrio entre o aprendizado acadêmico e as atividades físicas, importante para a saúde e bem-estar dos alunos.",
-  },
-  //1° Ensino Medio - Vespertino
-  {
-    cod: 19,
-    curso: "1° Ensino Médio - Vespertino",
-    categoria: 4,
-    valorIntegral: 2394.54,
-    docAluno:
-      "Aluno: |- RG |- CPF |- Certidão de Nascimento ou Casamento |- Comprovante de residência |- 01 Foto 3x4 |- Carteirinha de Vacinação |- Histórico do Ens. Fundamental com GDAE ou Transferência |- Declaração de Transferência |- Histórico de Transferência |Obs: na ausência do histórico com gdae deverá entregar uma declaração de conclusão do ensino fundamental |- Declaração de Escolaridade.",
-    docResp:
-      "Responsáveis: |- RG|- CPF|- Comprovante de residência|- Declaração de Adimplência |- Obrigatório a compra do uniforme escolar no ato da matrícula",
-    valorApostila: ApostilaMed1vesp,
-    idadeMatricula: "",
-    TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 1197,27 | - Até o dia 7º R$ 1257,13 | - Até o dia 25º R$ 1496,59",
-    horaAula: "",
-    desconto: descontMedioVes,
-
-    vtgEixo: "ENSINO MÉDIO",
-    vtgLetivo: "",
-    vtgHorario:
-      "Horário das Aulas | Manhã: 07h às 12h e 20min. | Tarde: 12h e 40min às 18h.",
-    vtgVantagens: "Quais as vantagens de estudar no Colégio Adélia: ",
-    vtg01:
-      "1 — Professores capacitados para o aprendizado dos alunos e no desenvolvimento curricular nos três anos do curso;",
-    vtg02:
-      "2 — Salas amplas próprias ao ambiente escolar, corredores e horário de lanche sempre monitorados pelos inspetores;",
-    vtg03:
-      "3 — Todo o aprendizado do curso é feito através do SISTEMA ANGLO DE ENSINO com apoio a plataforma PLURALL;",
-    vtg04:
-      "4 — Ao decorrer do ano letivo realizamos eventos proporcionando sempre um ambiente tranquilo e familiar;",
-    vtg05:
-      "5 — A escola conta com uma equipe pedagógica sempre presente, tendo os pais à possibilidade de saber a vida acadêmica do aluno com hora marcada previamente;",
-    vtg06:
-      "6 — Os pais ou responsáveis podem visualizar ON-LINE ocorrências, boletim e até mesmo o financeiro através do terminal WEB, acompanhar a vida escolar do aluno ou importantes acontecimentos dentro da escola;",
-    vtg07:
-      "7 — Plurall: Inovação tecnológica para realização de tarefas por aplicativo de celular ou pela Web. Além das tarefas, disponibiliza plantão de dúvidas, com monitores virtuais, para responder toda e qualquer dúvida dos alunos formando um grande banco de dados para consulta;",
-    vtg08: "8 — Aplicações de SIMULADOS PROVA ENEM (durante o ano letivo);",
-    vtg09:
-      "9 — O uso do uniforme (camisa da escola) é obrigatório para que não se tenha comparações entre os alunos, evitando inclusive o bullying;",
-    vtg10:
-      "10 - As aulas de Educação Física, são realizadas em períodos contrário a matrícula.",
   },
 ];
