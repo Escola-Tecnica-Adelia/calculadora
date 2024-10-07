@@ -301,8 +301,7 @@ var cursos = [
     valorApostila: ApostilaFund1,
     idadeMatricula: "",
     TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
@@ -346,8 +345,7 @@ var cursos = [
     valorApostila: ApostilaFund1,
     idadeMatricula: "",
     TextoSegundaMensalidade: TextoSegundaMensalidade,
-    SegundaMensalidade:
-      "- Até o dia 1º R$ 731,53 | - Até o dia 7º R$ 768,10 | - Até o dia 25º R$ 914,41",
+    SegundaMensalidade: SegundaMensalidadeFundamental1,
     horaAula: "",
     desconto: descontFund1s345,
 
