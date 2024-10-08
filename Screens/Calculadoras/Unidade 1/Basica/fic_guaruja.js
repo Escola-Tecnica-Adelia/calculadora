@@ -18,7 +18,7 @@ var cursos = [
     Perfil:
       "O Agente de Observação de Segurança do Trabalho acompanha serviços como liberação de entrada e saída de trabalhadores. Reconhece, avalia e controla riscos. Manuseia equipamentos e produtos. Realiza medições por meio de procedimentos estabelecidos, visando à prevenção de acidentes de trabalho, bem como à qualidade de vida.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 240,01",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 267,40",
   },
   {
     cod: 2,
@@ -58,7 +58,7 @@ var cursos = [
     Perfil:
       "Auxilia na aplicação de procedimentos de logística, recebimento, armazenagem, movimentação, expedição e distribuição de materiais e produtos. Colabora no controle das operações logísticas na perspectiva da multimodalidade.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 281,02",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 313,10",
   },
   {
     cod: 5,
@@ -72,7 +72,7 @@ var cursos = [
     Perfil:
       "Executa rotinas de processos administrativos do setor de Recursos Humanos de uma empresa. Realiza atividades de apoio ao planejamento, execução, avaliação e controle dos processos de recrutamento e seleção, treinamento e desenvolvimento, avaliação de desenvolvimento, avaliação de desempenho, progressão funcional, cargos, salários e benefícios, jornada de trabalho, férias e rescisão de contrato. Prepara, organiza, solicita e emite documentos e processos de acordo com a legislação trabalhista. Organiza informações cadastrais dos funcionários.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 281,02",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 313,10",
   },
   {
     cod: 6,
@@ -86,7 +86,7 @@ var cursos = [
     Perfil:
       "Realiza manutenção em computadores. Documenta, monta, instala, repara e configura computadores e dispositivos de hardware (periféricos). Identifica, Instala e configura sistemas operacionais e software aplicativos.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 240,01",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 267,40",
   },
   {
     cod: 7,
@@ -98,7 +98,7 @@ var cursos = [
       "- Anatomia Sistêmica |- Fundamentos da Enfermagem |- Saúde do Adulto e do Idoso |- Saúde da Criança e do Adolescente |- Português Instrumental",
     Perfil:
       "Executa processos administrativos e atividades de apoio em ambientes de atendimento de saúde, incluindo hospitais, clínicas e consultórios. Presta assistência e apoio aos profissionais de saúde, pacientes e familiares. Realiza tarefas relacionadas à organização de materiais, controle de estoque de suprimentos médicos e atendimento a pacientes. Fornecer informações básicas sobre procedimentos e cuidados de enfermagem. Trata de documentos e registros relacionados aos procedimentos de atendimento de saúde.",
-    Preco: "Presencial: Entrada de R$ 120,00 + 8x de R$ 397,44",
+    Preco: "Presencial: Entrada de R$ 120,00 + 8x de R$ 442,80",
   },
   {
     cod: 8,
@@ -112,7 +112,7 @@ var cursos = [
     Perfil:
       "Comercializa e realiza a dispensação de medicamentos e correlatos. Interpreta receitas prescritas pelo médico ou dentista e presta os devidos esclarecimentos no que se refere ao uso correto dos medicamentos. Auxilia na organização do estabelecimento farmacêutico, no controle de estoques e no armazenamento de medicamentos. Trabalha sob a supervisão do profissional farmacêutico.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 281,02",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 313,10",
   },
   {
     cod: 9,
@@ -126,7 +126,7 @@ var cursos = [
     Perfil:
       "Interpreta diagramas de motores elétricos, geradores e transformadores. Mede grandezas elétricas. Realiza o enrolamento de bobinas, induzidos, estatores e rotores.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 281,02",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 313,10",
   },
   {
     cod: 10,
@@ -153,7 +153,7 @@ var cursos = [
     Perfil:
       "Preparam cargas e descargas de mercadorias, movimentam e fixam mercadorias e cargas em navios, caminhões , vagões e instalações portuárias, entregam e coletam encomendas , manuseiam cargas especiais, reparam embalagens danificadas e controlam a qualidade dos serviços prestados.  Realizam atividades de limpeza e conservação nos armazéns portuários e nos navios, estabelecem comunicação, emitindo, recebendo e verificando mensagens, notificando e solicitando informações, autorizações e orientações de transporte, embarque e desembarque de mercadorias.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 240,01",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 267,40",
   },
   {
     cod: 12,

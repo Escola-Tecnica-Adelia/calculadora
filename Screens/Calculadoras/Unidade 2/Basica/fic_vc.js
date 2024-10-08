@@ -71,7 +71,7 @@ var cursos = [
     Perfil:
       "Executa rotinas de processos administrativos do setor de Recursos Humanos de uma empresa. Realiza atividades de apoio ao planejamento, execução, avaliação e controle dos processos de recrutamento e seleção, treinamento e desenvolvimento, avaliação de desenvolvimento, avaliação de desempenho, progressão funcional, cargos, salários e benefícios, jornada de trabalho, férias e rescisão de contrato. Prepara, organiza, solicita e emite documentos e processos de acordo com a legislação trabalhista. Organiza informações cadastrais dos funcionários.",
     Preco:
-      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 281,02",
+      "EAD: 12x de R$ 93,00 | Presencial: Entrada de R$ 120,00 + 7x de R$ 313,10",
   },
   {
     cod: 6,
@@ -97,7 +97,7 @@ var cursos = [
       "- Anatomia Sistêmica |- Fundamentos da Enfermagem |- Saúde do Adulto e do Idoso |- Saúde da Criança e do Adolescente |- Português Instrumental",
     Perfil:
       "Executa processos administrativos e atividades de apoio em ambientes de atendimento de saúde, incluindo hospitais, clínicas e consultórios. Presta assistência e apoio aos profissionais de saúde, pacientes e familiares. Realiza tarefas relacionadas à organização de materiais, controle de estoque de suprimentos médicos e atendimento a pacientes. Fornecer informações básicas sobre procedimentos e cuidados de enfermagem. Trata de documentos e registros relacionados aos procedimentos de atendimento de saúde.",
-    Preco: "Presencial: Entrada de R$ 120,00 + 8x de R$ 397,44",
+    Preco: "Presencial: Entrada de R$ 120,00 + 8x de R$ 442,80",
   },
   {
     cod: 8,

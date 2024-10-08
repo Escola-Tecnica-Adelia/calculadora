@@ -13,12 +13,12 @@
 		<link href="style.css" rel="stylesheet" type="text/css" media="screen">
 		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
 
-      <script type="text/javascript">
+    <script type="text/javascript">
 				var imported = document.createElement('script');
 				imported.src = 'guaruja.js';
 				document.head.appendChild(imported); 
 
-			function mostrar(a){
+				function mostrar(a){
 				var x=a.value;
 				console.log(x);
 				if(x==5){
@@ -60,7 +60,7 @@
 				document.getElementById("curso").value=1;
 				document.getElementById("valor1").value="";
 				document.getElementById("desconto1").value="";
-			    document.getElementById("Cursos2").style.display='none'
+			  document.getElementById("Cursos2").style.display='none'
 				document.getElementById("flex").value=12;
 				}
 
@@ -70,16 +70,13 @@
 					document.getElementById("total6").value="";
 				}
 
-
 				function popular(caixa1){
 				  	var cx1 = document.getElementById(caixa1);
 				  	var cx2 = document.getElementById('curso');	
 				  	cx2.innerHTML = "";
 
 				  	var opcaoCurso = cursos;
-						
-				
-				
+		
 					  for( i = 0; i < opcaoCurso.length; i++){
 
 						if(opcaoCurso[i].categoria == cx1.value){
@@ -143,7 +140,6 @@
 					var opcaoCurso = cursos; // intancio um array com minha base de dados
 					
 					var cx2 = document.getElementById("curso");	
-					var divTabelaValores = document.getElementById("tabela_valores_fic");
 					var divPagina2 = document.getElementById("pagina2");
 
 					for( i = 0; i < opcaoCurso.length; i++){
@@ -164,35 +160,10 @@
   								li.appendChild(document.createTextNode(docs[x]));
   								ul.appendChild(li);
 							}
-							
-						switch (cx2.value) {
-                            case "16":
-                            case "19":
-                                divTabelaValores.style.display = "block";
-                                divPagina2.style.display = "block";
-                                break;
-                            case "17":
-                                divPagina2.style.display = "block";
-                                divTabelaValores.style.display = "none";
-                                break;
-                            default:
-                                divTabelaValores.style.display = "none";
-                                divPagina2.style.display = "none";
-                                break;
-                        }
-
-
-
-						
-								
-				  			break;
-				  		}
-							
-
+						}
 				  	}
 
 					for( i = 0; i < opcaoCurso.length; i++){
-
 				  		if(opcaoCurso[i].cod == cx2.value){
 
 				  			document.getElementById('valor1').value = opcaoCurso[i].valorIntegral;
@@ -210,10 +181,8 @@
 				  			break;
 				  		}
 
-				  	}
-
-							
-				  	for( i = 0; i < opcaoCurso.length; i++){
+				  	}					
+				  for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
 
@@ -233,8 +202,7 @@
 				  		}
 
 				  	}
-
-				  	for( i = 0; i < opcaoCurso.length; i++){
+				  for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
 
@@ -254,7 +222,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -275,7 +242,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -296,7 +262,6 @@
 				  		}
 
 				  	}
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -317,8 +282,6 @@
 				  		}
 
 				  	}
-
-
 					for( i = 0; i < opcaoCurso.length; i++){
 
 				  		if(opcaoCurso[i].cod == cx2.value){
@@ -606,17 +569,14 @@
 				  	}  	
 				  }
 
-				  function limparLista(ul){
+				function limparLista(ul){
 				  	while (ul.firstChild) {
     							ul.removeChild(ul.firstChild);
   							}
 
   					}
 
-				  
-
-
-			function calcValor(){
+				function calcValor(){
 			  // zerando total
 			  document.getElementById("total1").value = '0';
 			  // valor líquido
@@ -651,19 +611,7 @@
 			  //document.getElementById("h1").value = 'R$ ' + PDESCONTO6.toFixed(2);
 			  document.getElementById("total6").value = 'R$ ' + TOTAL6.toFixed(2);
 			  }
-
-			//  function verificaModalidade(){
-			//		var element = getElementById('eixo');
-			//		var element=document.getElementById('modali');
-			///		if(element.value=='5'){
-				//		element.style.display='block';
-			//		}
-			//		else{
-				//		element.style.display='none';
-			//		}
-			//	}
-
-			</script>
+		</script>
 
 		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
 		<link rel="stylesheet" href="../../../../Styles/css/colegio.css">
@@ -671,11 +619,12 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 	</head>
+	
 	<body>
 		<div class="Impressao">
 		<main class="break">
 			<header>
-			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">MENSALIDADES 2024 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ - DATA: <b id="date"></p></b></h1>
+			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">MENSALIDADES 2025 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ - DATA: <b id="date"></p></b></h1>
          
   <script>
                    var currentDate  = new Date(),
@@ -690,16 +639,15 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
             </script>
 			
 			</header>
+
 			<div class="ImgLogos">
-				<img id ="logo" src="../../../../Styles/img/logo_colegio_adelia.png" width= "30" height= "30"/>
+				<img id ="logo" src="../../../../Styles/img/logo_colegio_adelia.png"/>
 			</div>
+			
 			<div class="container" style="margin-left: 30px;" >
 			    <br>
 			
 				<div class="cursos" style="display: flex;">
-				
-				
-
 		
 			<label style="font-family: Roboto; " id ="eixos" class="eixos" for="Eixos">Eixos:</label>
 			<select style="font-family: Roboto; " id="eixo" name="eixo" onchange="popular(this.id), limpar(),mostrar(eixo)">
@@ -709,16 +657,14 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 					<option value="2">Ensino Fundamental I</option>
 					<option value="3">Ensino Fundamental II</option>
 					<option value="4">Ensino Médio</option>
-				
 				</select>
-    				<label id="Cursos2" class="Cursos2" for="Cursos2" style="display: none; font-family: Roboto">Modalidade:</label>
+
+    			<label id="Cursos2" class="Cursos2" for="Cursos2" style="display: none; font-family: Roboto">Modalidade:</label>
 					<select style="font-family: Roboto; " id="curso" name="curso" onchange="atribuirValores(),limpar(), verificarExibicao(this.value)" ></select>
 			<button id="voltar" type="button" onclick="voltar(),limpar()" style=" width: 80px; height: 29px; font-size: 17px; float:inherit; margin-left: 5px;">Voltar</button>
 		</div>
 			<form class="form-horizontal">
 			<fieldset>
-
-				
 
 			<!-- Text input-->
 			<div class="form-group1">
@@ -804,96 +750,7 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 					}
 				</style>
 
-			<div id="tabela_valores_fic" style="display: none;">
-			<h3 style="font-weight: bold; font-size: 16px; font-family: Roboto; margin-bottom: 12px; line-height: 1.3;" class="">
-				De acordo com o Novo Ensino Médio, os alunos da 1ª SÉRIE precisarão cursar 400 horas de qualificação profissional, devendo escolher uma das seguintes opções:
-			</h3>
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Certificação</th>
-							<th>EAD</th>
-							<th>Presencial</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>Atendente de Enfermagem</td>
-						<td class="center"></td>
-						<td class="rows border center">Entrada de R$ 120,00 + 8x de R$ 397,44</td>
-					</tr>
-					<tr>
-						<td>Agente de Observação de Segurança</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Assistente de Logística</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Assistente de Recursos Humanos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Assistente de Suporte e Manutenção de Computadores</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Balconista de Farmácia</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-					<tr>
-						<td>Instalador de Sistemas de Acionamentos Elétricos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 281,02</td>
-					</tr>
-						<tr>
-						<td>Operador de Terminais Portuários</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center">Entrada de R$ 120,00 + 7x de R$ 240,01</td>
-					</tr>
-					<tr>
-						<td>Assistente Administrativo</td>
-						<td class="center">12x de R$ 93,00</td>		
-						<td></td>			
-					</tr>
-					<tr>
-						<td>Assistente de Contabilidade</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td class="rows border center"></td>
-					</tr>	
-					<tr>
-						<td>Maquiador</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Organizador de Eventos</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Programador de Sistemas</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Recepcionista em Serviços de Saúde</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Vendedor</td>
-						<td class="center">12x de R$ 93,00</td>
-						<td></td>
-					</tr>
-				</table>
-			</div>
-			
+
       <h3 style="font-weight:bold; font-size: 16px; font-family: Roboto; margin-top: 12px;" id="TextoSegundaMensalidade">
 			</h3>
 
@@ -922,25 +779,18 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 			<div class="horaAula">
 				<ul id="horaAula"></ul>
 			</div>
-            
+			
+			<footer class="rodape-pagina">
+				<img border="0" src="../../../../Styles/img/Rodape.png" >
+			</footer>
 		
     	</div>
 		</main>
 	</div>
 
 	<!--_________________________________________PÁGINA 2___________________________________________-->
-	
-	<main class="break" id="pagina2">
-		<h1 style="font-weight: bold; font-size: 32px; text-align: center;" class="titulo-principal">MATRIZ CURRICULAR 2024 - 1ª SÉRIE</h1>
-		<div style="display: flex; justify-content: center; align-items: center;">
-			<img style="margin-top: 26px;" src="./horario.png">
-		</div>
-	</main>
-<!--_________________________________________PÁGINA 3___________________________________________-->
-
-
 		<main class="break">
-			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">VANTAGENS 2024 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ </p> <b id="date"></b></h1>
+			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">VANTAGENS 2025 - COLÉGIO ADÉLIA - UNIDADE I <p> SANTA ROSA - GUARUJÁ </p> <b id="date"></b></h1>
 			<div class="container">
 			<div style="font-family: Roboto; line-height:1.5" class="Vantagens">
 				<div class="vtgEixo">
@@ -999,9 +849,6 @@ document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/
 				<ul style="font-family: Roboto; font-size: 16px;" id="vtg10"></ul>
 				</div>
 			</div>
-		<footer class="rodape-pagina">
-			<img border="0" src="../../../../Styles/img/Rodape.png" >
-		</footer>
 		</div>
 		</main>
 	</body>
