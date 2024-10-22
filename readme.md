@@ -21,3 +21,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 
 - 1.3.2
 1. Atualização lista de matarial unidade 2
+
+- 1.3.3
+1. Funciona tanto "," quanto "." para o desconto.
