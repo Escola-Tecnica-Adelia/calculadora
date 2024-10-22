@@ -57,7 +57,7 @@
                 valorIntegral: 615,
                 desconto: 28.00,
                 valorApostila: "- Entrada de R$120,00 no ato da matrícula + 24 parcelas mensais.",
-                horario: "- Horário de Aula (manhã): 07h00 às 11h20\n- Horário de Aula (noite): 18h05 às 22h15"
+                horario: "- Horário de Aula (manhã): 07h às 11h20\n- Horário de Aula (noite): 18h05 às 22h15"
             },
             {
                 cod: 27,
@@ -81,7 +81,7 @@
                 valorIntegral: 615,
                 desconto: 27.53,
                 valorApostila: "- Entrada de R$120,00 no ato da matrícula + 12 parcelas mensais.",
-                horario: "- 3 vezes na semana das 20:00h às 22:00h ou aos Sábados das 08:00h às 13:00h"
+                horario: "- 3 vezes na semana das 20h às 22h ou aos Sábados das 08h às 13h"
             },
             {
                 cod: 29,
@@ -165,7 +165,7 @@
 
         function calculateValues() {
             var valorIntegral = parseFloat(document.getElementById("valor1").value);
-            var desconto = parseFloat(document.getElementById("desconto1").value);
+            var desconto = parseFloat(document.getElementById("desconto1").value.replace(",", "."));
 
             if (!isNaN(valorIntegral) && !isNaN(desconto)) {
                 var total1 = valorIntegral * (1 - desconto / 100);
