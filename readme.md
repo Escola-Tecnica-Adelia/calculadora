@@ -18,3 +18,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 - 1.3.1
 1. Correção de valores e bugs
 2. Adição dos valores do vestibulinho
+
+- 1.3.2
+1. Atualização lista de matarial unidade 2
