@@ -24,3 +24,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 
 - 1.3.3
 1. Funciona tanto "," quanto "." para o desconto.
+
+- 1.4.3
+1. Adição vestibulinho educação profissional
