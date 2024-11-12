@@ -27,3 +27,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 
 - 1.4.3
 1. Adição vestibulinho educação profissional
+
+- 1.5.3
+1. Adição vestibulinho fund 2 e médio
