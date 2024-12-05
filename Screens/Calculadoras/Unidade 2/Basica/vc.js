@@ -64,7 +64,7 @@ var cursos = [
     vtg04:
       "4 - Estrutura Adaptada: Contamos com uma estrutura física preparada para as atividades recreativas, com materiais adequados para desenvolver a coordenação motora grossa e fina das crianças. Toda a área é monitorada por câmeras e supervisionada por inspetores, oferecendo total segurança.",
     vtg05:
-      "5 - Atividades Diversificadas: Momentos como a hora da música, conto, arte, culinária, além de atividades na piscina e parquinho, são essenciais para promover a socialização e o bem-estar dos alunos.",
+      "5 - Atividades Diversificadas: Momentos como a hora da música, conto, arte, culinária, além de atividades no parquinho, são essenciais para promover a socialização e o bem-estar dos alunos.",
     vtg06:
       "6 - Banheiros Adaptados: Disponibilizamos banheiros exclusivos e adaptados para as crianças, sempre com a supervisão de um responsável, garantindo conforto e segurança.",
     vtg07:
