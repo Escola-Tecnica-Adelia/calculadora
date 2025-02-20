@@ -30,3 +30,6 @@ Documentação sobre a calculadora de mensalidades do colégio adélia.
 
 - 1.5.3
 1. Adição vestibulinho fund 2 e médio
+
+- 1.5.4
+1. DPs
