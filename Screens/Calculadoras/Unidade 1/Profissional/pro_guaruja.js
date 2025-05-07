@@ -166,7 +166,7 @@ var cursos = [{
     valorApostila: "- Total de 6 parcelas mensais |- Material didático incluso.",
     idadeMatricula: "",
     horaAula: "",
-    desconto: 59.26,
+    desconto: 41.951,
 
     vtgEixo:"EDUCAÇÃO PROFISSIONAL",
     vtgLetivo: "",
